@@ -1,1 +1,1 @@
-# Hapido-frontend
+# Hapido-frontend: my project
