@@ -1,0 +1,30 @@
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Googlebot-Image
+User-agent: GPTBot
+User-agent: LinkedInBot
+User-agent: Pinterestbot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: FacebookBot
+User-agent: facebookexternalhit
+User-agent: Applebot
+User-agent: baiduspider
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: msnbot
+User-agent: Twitterbot
+User-agent: TelegramBot
+User-agent: Yandex
+User-agent: Yeti
+
+Disallow: /*/cart/
+Disallow: /*/checkout/
+Disallow: /cartitemlist/
+
+User-agent: *
+Disallow: /
+
+Host: www.hapido.com
+
+Sitemap: https://cdn.hapido.com/sitemap.xml

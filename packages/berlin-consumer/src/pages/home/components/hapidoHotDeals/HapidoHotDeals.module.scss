@@ -1,0 +1,115 @@
+@use '../../berlin-common/src/global-styles/variables';
+
+.HotDEalsHeading {
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 30px;
+}
+.HotDealsContainer {
+  color: variables.$secondary-text;
+  height: 700px;
+
+  .hotDealsBanner {
+    img,
+    video {
+      max-width: 100%;
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      border-radius: 0px;
+    }
+  }
+  .hotDealsSliderCard {
+    height: 375px;
+    max-width: 95%;
+    margin: 4px 0px 40px 0px;
+    padding: 4px;
+    .AedHeading {
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      padding-top: 13px;
+    }
+    .subHeading {
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      padding: 4px 4px 0px 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .hotDealsImg {
+      margin: 28px auto;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .HotDealsContainer {
+    height: 600px;
+
+    .hotDealsBanner {
+      img,
+      video {
+        height: 600px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .HotDealsContainer {
+    height: 550px;
+
+    .hotDealsBanner {
+      img,
+      video {
+        height: 550px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .HotDealsContainer {
+    height: 500px;
+
+    .hotDealsBanner {
+      img,
+      video {
+        height: 500px;
+      }
+    }
+  }
+}
+
+.imgFluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.TwoRowSlider {
+  margin-bottom: 34px;
+  width: 430px;
+  height: 380px;
+  object-fit: cover;
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    width: 298px;
+    height: 380px;
+    object-fit: cover;
+  }
+  @media (min-width: 1401px) and (max-width: 1700px) {
+    width: 340px;
+    height: 380px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .hotDealsBanner {
+    display: none;
+  }
+}

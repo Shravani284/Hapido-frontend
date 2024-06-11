@@ -1,0 +1,427 @@
+@use '../../berlin-common/src/global-styles/variables';
+
+.headerText {
+  font-size: 28px;
+  font-weight: bold;
+  padding-bottom: 32px;
+}
+
+.card {
+  box-shadow: 0px 3px 6px variables.$card-shadow !important;
+  border-radius: 18px !important;
+  padding: 24px 10px 24px 10px;
+  overflow: visible !important;
+
+  //--------------------Highlight Component---------------------
+  .highlightCard {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    font-size: 16px;
+  }
+
+  .highlightIcon {
+    max-width: 100%;
+    width: 20vw;
+    height: 100px;
+    object-fit: cover;
+
+    cursor: inherit !important;
+
+    @media (min-width: 1440px) and (max-width: 2560px) {
+      height: 120px;
+    }
+    @media (max-width: 1200px) {
+      width: auto;
+    }
+    // @media (max-width: 768px) {
+    //   height: 70px;
+    // }
+  }
+
+  .highlightText {
+    margin-top: 10px;
+    line-height: 1.2;
+    word-wrap: break-word;
+    @media (max-width: 2000px) {
+      font-size: 14px;
+    }
+    @media (max-width: 1600px) {
+      font-size: 12px;
+    }
+  }
+
+  //-------------------Schedule Component----------------------
+  .cardScheduleHeader {
+    margin-top: -4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    // flex-wrap: wrap;
+    .oldRate {
+      text-decoration: line-through;
+      font-size: 30px;
+      font-weight: 400;
+
+      margin-right: 13px;
+      @media (max-width: 2000px) {
+        font-size: 25px;
+      }
+      @media (max-width: 1600px) {
+        font-size: 22px;
+      }
+    }
+
+    .newRate {
+      font-size: 30px;
+      font-weight: 400;
+
+      @media (max-width: 2000px) {
+        font-size: 25px;
+      }
+      @media (max-width: 1600px) {
+        font-size: 22px;
+      }
+
+      .newAED {
+        padding-left: 10px;
+      }
+    }
+
+    // .discountCap {
+    // padding-top: 15px;
+    // min-width: 145px;
+    // }
+    .discount {
+      border-radius: 10px;
+      background-color: variables.$discount-bg-color;
+      // width: 144px;
+      font-size: 22px;
+      color: variables.$secondary-text;
+      padding: 10px 17px;
+      font-weight: bold;
+      @media (max-width: 1600px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .terms {
+    margin-top: 6px;
+    text-decoration: underline;
+    font-weight: 400;
+
+    font-size: 24px;
+
+    @media (max-width: 1600px) {
+      font-size: 20px;
+    }
+  }
+
+  .travelerDetail {
+    margin: 20px 0;
+
+    font-weight: 700;
+    font-size: 24px;
+
+    @media (max-width: 2000px) {
+      font-size: 20px;
+    }
+    @media (max-width: 1600px) {
+      font-size: 17px;
+    }
+  }
+  .dealNotFound {
+    text-align: center;
+    color: variables.$primary-text;
+    margin: 50px 0px;
+  }
+  .counterHeader {
+    font-size: 16px;
+
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  .cancellation {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .scheduleFooter {
+    font-size: 24px;
+    font-weight: 400;
+
+    .underline {
+      text-decoration: underline;
+    }
+  }
+}
+
+.counterHeader {
+  font-size: 16px;
+
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.dFlex {
+  display: flex;
+  padding-bottom: 32px;
+  justify-content: space-between;
+
+  .dFlexbtn {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 150px;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      min-width: 120px;
+      margin-top: 30px;
+    }
+
+    .addbtn {
+      background-color: variables.$primaryBtn-bg;
+      font-size: 24px;
+      border: none;
+      color: variables.$secondary-text;
+      display: block;
+
+      width: 30px;
+      height: 30px;
+
+      @media (max-width: 767px) {
+        width: 25px;
+        height: 25px;
+      }
+      span {
+        position: relative;
+        bottom: 1px;
+      }
+
+      border-radius: 50%;
+
+      &:disabled {
+        background: variables.$disabled-bg-color;
+        color: variables.$disabled-text-color;
+      }
+    }
+
+    .pplCount {
+      font-size: 20px;
+      font-weight: 600;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .adtppl {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize !important;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      text-transform: capitalize !important;
+    }
+
+    .minMaxLimit {
+      font-size: 16px;
+      font-weight: 400;
+      padding-top: 5px;
+
+      @media (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+//----------------Location popup------------------------
+.locationBtnContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.locationBtn {
+  // min-width: 80%;
+  width: 100% !important;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.locationBtn:hover {
+  background-color: variables.$card-shadow;
+}
+
+.locationBtn:active {
+  background-color: aquamarine;
+}
+
+.timecard {
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 698px;
+  box-shadow: 0px 3px 6px variables.$card-shadow !important;
+  border-radius: 28px !important;
+  padding: 40px 67px 50px 68px;
+  margin-bottom: 12px;
+}
+
+.clockPopup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // gap:1px;
+}
+
+.timeButton {
+  //   width: 175px !important;
+  // height: 49px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 19px !important;
+  padding: 2px 13px !important;
+  border: 1px solid variables.$border-gray !important;
+  border-radius: 9px !important;
+
+  background-color: variables.$body-bg-color;
+  color: variables.$Black-text;
+}
+
+.timeBtnClicked {
+  //   width: 175px;
+  //   height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  padding: 2px 13px;
+  border: 1px solid variables.$border-gray;
+  border-radius: 9px;
+  opacity: 1;
+
+  background-color: variables.$theme-text;
+  color: variables.$button-onactive;
+}
+.bookBtn {
+  > button {
+    width: 140px !important;
+    margin: 0px !important;
+    @media screen and (max-width: 767px) {
+      width: 125px !important;
+    }
+  }
+}
+.singleBookBtn {
+  width: 100% !important;
+  @media screen and (max-width: 767px) {
+    justify-content: center !important;
+  }
+}
+//highlightIcon
+//-------------------------------------------------Mobile Responsive----------------------------------------------------------------
+@media screen and (max-width: 767px) {
+  .scrollContainer {
+    // overflow-x: auto;
+    // white-space: nowrap;
+    // display: flex;
+    display: grid;
+    overflow: scroll;
+    padding-bottom: 10px;
+  }
+
+  // /* Optional: Add some space between items in horizontal scroll */
+  // .scrollContainer > * {
+  //   margin-right: 10px;
+  //   // width: 25%;
+  // }
+
+  .highlightCard {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    font-weight: 200;
+
+    img {
+      width: 20vw !important;
+    }
+  }
+
+  .highlightText {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 6px;
+    word-wrap: break-word !important;
+  }
+
+  .MobCard {
+    display: none;
+  }
+
+  .card {
+    border-radius: 0px !important;
+  }
+
+  .headerText {
+    display: none;
+  }
+}
+
+.locationCustom {
+  font-weight: 200;
+  list-style: none;
+  padding: 5px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(211, 211, 211, 0.605);
+  & > div {
+    padding: 0px 10px;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.locationCustom.active {
+  color: red;
+  border-bottom: 2px solid rgba(211, 211, 211, 0.475);
+}
+
+// mobile css popup css
+@media (max-width: 767px) {
+  .bookingButton {
+    color: variables.$Black-text !important;
+    background-color: variables.$secondary-bg !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .highlightCard {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    font-weight: 200;
+  }
+
+  .highlightText {
+    font-size: 10px;
+    margin-top: 6px;
+    word-wrap: break-word !important;
+  }
+}

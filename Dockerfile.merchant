@@ -1,0 +1,23 @@
+FROM node:alpine as builder
+
+WORKDIR /hapido-fe
+
+COPY package*.json ./
+
+RUN yarn
+
+COPY . .
+
+RUN yarn workspace berlin-merchant build
+
+FROM node:alpine
+
+WORKDIR /hapido-fe
+
+COPY --from=builder /hapido-fe/packages/berlin-merchant/dist/ ./berlin-merchant/dist
+
+RUN yarn global add serve
+
+EXPOSE 5175
+
+CMD ["serve", "-s", "berlin-merchant/dist", "-l", "5175"]

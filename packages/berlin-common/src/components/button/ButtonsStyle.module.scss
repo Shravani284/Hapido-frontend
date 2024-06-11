@@ -1,0 +1,70 @@
+@use "../../berlin-common/src/global-styles/variables";
+
+.primaryBtn {
+  width: 100% !important;
+  background: #fc1c15 0% 0% no-repeat padding-box !important;
+  color: variables.$secondary-text !important;
+  border-radius: 13px !important;
+  font-size: 22px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  cursor: pointer !important;
+  padding: 12px 0px !important;
+  margin: 20px 0px !important;
+  text-transform: capitalize !important;
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.secondaryButton {
+  width: 100% !important;
+  background: variables.$secondary-bg 0% 0% no-repeat padding-box !important;
+  color: variables.$Black-text !important;
+  border: 1px solid variables.$border-color !important;
+  border-radius: 13px !important;
+  font-size: 22px !important;
+  font-family: "Open Sans", "bold";
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 14px 0px !important;
+  cursor: pointer !important;
+  text-transform: capitalize !important;
+}
+
+.resSecondaryBtn {
+  width: 100% !important;
+  background: variables.$secondary-bg !important;
+  color: variables.$Black-text !important;
+  border: 1px solid variables.$border-color-res !important;
+  border-radius: 19px !important;
+  font-size: 14px !important;
+  font-family: "Open Sans";
+  font-weight: 600 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  padding: 0px 0px !important;
+  margin: 0px 20px !important;
+  text-transform: capitalize !important;
+  cursor: pointer !important;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .primaryBtn {
+    font-size: 18px !important;
+    padding: 12px 0px !important;
+  }
+  .defaultButton {
+    width: 100% !important;
+    background: variables.$secondary-bg 0% 0% no-repeat padding-box !important;
+    color: #fc1c15 !important;
+    border: 1px solid #fc1c15 !important;
+    border-radius: 13px !important;
+    font-size: 24px !important;
+    font-family: "Open Sans", "bold";
+    text-align: center !important;
+    vertical-align: middle !important;
+    padding: 14px 0px !important;
+    text-transform: capitalize !important;
+  }
+}

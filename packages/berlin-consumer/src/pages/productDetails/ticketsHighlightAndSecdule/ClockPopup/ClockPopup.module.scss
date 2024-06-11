@@ -1,0 +1,179 @@
+@use '../../../../../../berlin-common/src/global-styles/variables';
+
+.timecard {
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 698px;
+  box-shadow: 0px 3px 6px variables.$card-shadow !important;
+  border-radius: 28px !important;
+  padding: 40px 67px 50px 68px;
+  margin-bottom: 12px;
+}
+
+.clockPopup {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.statusText {
+  text-align: center;
+  @media (max-width: 767px) {
+    font-size: 13px;
+  }
+}
+.timeButton {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  margin-bottom: 2px !important;
+  margin-top: 15px;
+  padding: 2px 13px !important;
+  border: 1px solid variables.$border-gray !important;
+  border-radius: 9px !important;
+
+  background-color: variables.$body-bg-color;
+  color: variables.$Black-text;
+  gap: 10px;
+  width: 100%;
+  &:disabled {
+    cursor: not-allowed;
+    color: #ccc;
+  }
+
+  @media (max-width: 1600px) {
+    gap: 3px !important;
+    padding: 2px 13px !important;
+  }
+
+  @media (max-width: 1400px) {
+    gap: 3px !important;
+    padding: 2px 5px !important;
+  }
+
+  @media (max-width: 767px) {
+    padding: 2px 5px !important;
+    gap: 6px;
+    .firstWord {
+      font-size: 14px;
+    }
+    .secondWord {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 2px 5px !important;
+    gap: 6px;
+    .firstWord {
+      font-size: 11px;
+    }
+    .secondWord {
+      font-size: 11px;
+    }
+  }
+}
+
+.timeBtnClicked {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-around !important;
+  margin-bottom: 2px !important;
+  margin-top: 15px;
+  padding: 2px 13px !important;
+  border: 1px solid variables.$border-gray !important;
+  border-radius: 9px !important;
+
+  background-color: variables.$theme-text;
+  color: variables.$button-onactive;
+  gap: 10px;
+  width: 100%;
+
+  @media (max-width: 1600px) {
+    gap: 3px !important;
+    padding: 2px 13px !important;
+  }
+
+  @media (max-width: 1400px) {
+    gap: 3px !important;
+    padding: 2px 5px !important;
+  }
+
+  @media (max-width: 767px) {
+    padding: 2px 5px !important;
+    gap: 6px;
+    .firstWord {
+      font-size: 14px;
+    }
+    .secondWord {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 2px 5px !important;
+    gap: 6px;
+    .firstWord {
+      font-size: 11px;
+    }
+    .secondWord {
+      font-size: 11px;
+    }
+  }
+}
+
+.slash {
+  width: 1px;
+  height: 43px;
+  background-color: variables.$slash-icon;
+  transform: rotate(40deg);
+  font-size: 18px;
+  opacity: 1;
+  @media (max-width: 767px) {
+    height: 25px !important;
+  }
+}
+
+.slashActive {
+  width: 1px;
+  height: 43px;
+  transform: rotate(40deg);
+  font-size: 18px;
+  opacity: 1;
+  background-color: variables.$button-onactive;
+  color: variables.$button-onactive;
+}
+
+.firstWord {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+
+  @media (max-width: 1700px) {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    text-wrap: nowrap;
+  }
+
+  //   padding-top:0px,
+}
+
+.secondWord {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+
+  @media (max-width: 1700px) {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    text-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,116 @@
+// bg
+$body-bg-color: #f6f8fb;
+$primary-bg: #fb1d14;
+$secondary-bg: #ffffff;
+$primaryBtn-bg: #fc1c15;
+$Black-bg: #000000;
+$btn-bg: #ff311c;
+$card-bg: #f5f7fa;
+$review_bg: #ffd7ca25;
+
+// text
+$primary-text: #fb1d14;
+$Black-text: #000000;
+$theme-text: #fc1c15;
+$book-button: #37a52e;
+$secondary-text: #ffffff;
+$placeholder-text: #c4c4c4;
+$language-text: #707070;
+$view-text: #8b8b8b;
+$description-text: #a9adb3;
+$savedCard-text: #3c4a53;
+$aed_Text: #818990;
+$placeholder_text: #5d686f;
+
+//NEW label for card
+$new-label: #009688;
+$label-text: #fafafa;
+
+// border
+$border-gray: #707070;
+$border-whiteGray: #d4d5d7;
+
+// box shaddow
+$card-shadow: #00000029;
+$book-button: #37a52e;
+$border-color: #707070;
+$border-color-res: #fb1d14;
+
+//slash Icon
+$slash-icon: #707070;
+
+//button content on Active
+$button-onactive: #ffffff;
+
+// Font Family EN
+$Roboto-regular: 'robotoregular';
+$Roboto-light: 'robotolight';
+$Roboto-bold: 'robotobold';
+
+// Font Family AR
+$Tajawal-regular: 'Tajawal Regular';
+$Tajawal-light: 'Tajawal Light';
+$Tajawal-bold: 'Tajawal Bold';
+
+//original price
+$org-price-text: #b1afaf;
+
+// Form Field
+$Field-color: #f5f5f5;
+
+// Buttons
+$book-button: #37a52e;
+$button-border: #000000;
+
+// border
+$primary-border: #ff0000;
+$hrLine-color: #dddddd;
+
+//button border for Book Now
+$theme-border: #fc1c15;
+$rating-box: #37a52e;
+
+$theme-text: #fc1c15;
+$book-button: #37a52e;
+$border-color: #707070;
+$theme-text: #fc1c15;
+$secondary-text: #ffffff;
+$placeholder-text: #c4c4c4;
+$language-text: #707070;
+
+// Form Field
+$Field-color: #f5f5f5;
+$cart-input: #36a52e;
+$cart-input-bg: #28de1b61;
+$cart-field-bg: #f4fcf4;
+
+// Buttons
+$book-button: #37a52e;
+$button-border: #000000;
+$review-btn-border: #151515;
+
+// border
+$primary-border: #ff0000;
+$hrLine-color: #dddddd;
+$cart-Border: #d8d8d8;
+
+// error
+$Error-text: #d32f2f;
+
+// Search input
+$search-input: #e5d8d8;
+
+//Discount Cap
+$discount-bg-color: #94ce8e;
+
+//Disabled Button
+$disabled-bg-color: #eaeaea;
+$disabled-text-color: #c0c0c0;
+@mixin textFormat($font, $color: $Black-text, $size) {
+  font-family: $font;
+  color: $color;
+  font-size: $size;
+}
+
+//Popup Message
+$PopupPrimary-text: #ffffff;

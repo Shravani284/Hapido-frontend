@@ -1,0 +1,85 @@
+@use '../../berlin-common/src/global-styles/variables';
+
+.placeCategoryContainer {
+  // justify-content: space-between;
+  display: flex;
+  overflow-x: auto;
+  margin: 50px 0px;
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: lightgray !important;
+    border-radius: 20px !important;
+  }
+  .PlaceCatImg {
+    margin: 11px 0px;
+    img {
+      width: 156px;
+      height: 156px;
+      max-width: 156px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+  .placeName {
+    padding-bottom: 10px;
+    width: 154px;
+    font-weight: 700;
+    word-break: break-all;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    @media (max-width: 1440px) {
+      padding: 10px 12px;
+      font-size: 16px;
+    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.GridRow {
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// Responsive css
+.mobileScroll {
+  overflow-x: auto;
+}
+.MobPlaceCategoryContainer {
+  display: flex;
+  margin: 20px 0px;
+  padding-bottom: 10px;
+  column-gap: 30px !important;
+  @media (min-width: 768px) {
+    overflow-x: auto;
+  }
+  .PlaceCatImg {
+    margin: 10px 0px;
+    img {
+      width: 88px;
+      height: 88px;
+      max-width: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .placeName {
+    font-weight: bold;
+    width: 88px;
+    word-break: break-all;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

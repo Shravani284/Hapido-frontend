@@ -1,0 +1,936 @@
+@use '../../berlin-common/src/global-styles/variables';
+
+.voucherTitle {
+  padding-top: 53px;
+  padding-bottom: 20px;
+  display: flex;
+
+  h1 {
+    font-size: 20px;
+    margin-right: 4px;
+
+    font-weight: bold;
+    line-height: 23px;
+    font-style: normal;
+    text-align: left;
+    color: variables.$Black-text;
+  }
+  svg {
+    width: 26px;
+  }
+}
+.mobileVouchers {
+  font-weight: 200;
+  padding-top: 65px;
+  padding: 20px;
+  // padding-top: 0;
+  margin: 0px -16px;
+  margin-bottom: 0 !important;
+  background: #ffffff !important;
+  .accountMobTopSet {
+    padding-top: 65px;
+  }
+}
+
+.Vouchers {
+  margin-top: 0px;
+  padding: 20px;
+  .addBtnMob {
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+    top: 25px;
+    font-size: 12px;
+    line-height: 19px;
+    font-weight: 200;
+    width: 85px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffd7ca;
+    color: #3c4a53;
+  }
+  .accountHeader {
+    border-bottom: 1px solid #ccc;
+    z-index: 99;
+    background-color: #fff;
+    margin-left: -36px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 65px;
+  }
+  .accountTitle {
+    font-weight: 200;
+
+    font-size: 16px;
+    color: #3c4a53;
+    margin-top: 22px;
+    text-align: center;
+  }
+}
+
+.voucherCard {
+  margin-bottom: 20px;
+  border-radius: 20px !important;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+  background: variables.$secondary-bg;
+  padding: 4px;
+  .imgWrapper {
+    width: 170px;
+  }
+  .textWrapper {
+    max-width: 81%;
+  }
+  .voucherImg {
+    width: 150px;
+    height: 150px;
+    object-fit: 'cover';
+  }
+  img {
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    text-align: left;
+    font-weight: bold;
+    color: variables.$Black-text;
+    padding-bottom: 0px;
+    margin-bottom: 7px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  h2 {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    text-align: left;
+    color: variables.$primary-bg;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .iconBox {
+    display: flex;
+    column-gap: 8px;
+    padding-bottom: 2px;
+    align-items: center;
+
+    p {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 16px;
+      font-style: normal;
+      text-align: left;
+      color: variables.$aed_Text;
+    }
+
+    svg {
+      width: 17px;
+    }
+  }
+
+  .statusBar {
+    width: max-content;
+    border-radius: 5px;
+    padding: 6px 10px 3px 10px;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 15px;
+    font-style: normal;
+    text-align: left;
+    color: variables.$secondary-text;
+    margin-top: 8px;
+  }
+
+  .aedBox {
+    h2 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      font-style: normal;
+      text-align: right;
+      padding-bottom: 2px;
+      color: variables.$primary-bg;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 14px;
+      font-style: normal;
+      text-align: right;
+      color: variables.$aed_Text;
+    }
+  }
+
+  .buttonBox {
+    margin-left: 0px;
+    // padding-top: 18px;
+    display: flex;
+    column-gap: 14px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: -20px;
+    button,
+    a {
+      cursor: pointer;
+      width: max-content !important;
+      padding: 5px 10px !important;
+      font-size: 12px !important;
+      color: variables.$savedCard-text !important;
+      border-color: variables.$savedCard-text !important;
+      border-width: 1px !important;
+      border-style: solid !important;
+      border-radius: 8px !important;
+      margin-bottom: 14px;
+      font-weight: 200;
+
+      line-height: 18px !important;
+      font-style: normal !important;
+      background: variables.$secondary-bg;
+      &.addReviewBtn {
+        background: variables.$theme-text 0% 0% no-repeat padding-box;
+        color: #fff !important;
+        opacity: 0.8;
+      }
+      &.allVoucherDownload {
+        border-color: #fb1d14 !important;
+        color: #fb1d14 !important;
+        opacity: 0.8;
+      }
+    }
+    a {
+      padding: 5px 10px !important;
+      font-size: 12px !important;
+      text-decoration: none;
+      color: variables.$savedCard-text !important;
+      border-color: variables.$savedCard-text !important;
+    }
+  }
+}
+
+.reviewVoucher {
+  border-radius: 20px !important;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+  background: variables.$secondary-bg;
+  margin: 50px auto;
+  width: 70%;
+  box-shadow: none !important;
+  padding: 17px;
+
+  .mobileArrow {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+    font-style: normal;
+    text-align: left;
+    color: variables.$Black-text;
+    padding-bottom: 19px;
+  }
+
+  h3 {
+    padding-bottom: 7px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    font-style: normal;
+    color: variables.$Black-text;
+    margin-top: 12px;
+  }
+
+  h4 {
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    color: variables.$primary-bg !important;
+  }
+
+  .uploadReviewImg {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .imgThumbnail {
+      position: relative;
+      img {
+        margin-right: 25px;
+        border-radius: 8px;
+        width: 80px;
+        height: 80px;
+      }
+      button {
+        position: absolute;
+        border: 1px solid #ccc;
+        min-width: auto !important;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        padding: 0;
+        top: -15px;
+        right: 5px;
+        background-color: #eee;
+        padding: 15px;
+        &:hover {
+          color: variables.$primary-bg !important;
+          border-color: variables.$primary-bg !important;
+        }
+      }
+    }
+  }
+
+  .iconBox {
+    display: flex;
+    column-gap: 8px;
+    padding-top: 9px;
+    align-items: center;
+
+    p {
+      font-weight: 200;
+      font-size: 14px;
+      line-height: 16px;
+      font-style: normal;
+      text-align: left;
+      color: variables.$aed_Text;
+    }
+
+    svg {
+      width: 17px;
+      color: variables.$aed_Text;
+    }
+  }
+  .ratingSec {
+    padding-bottom: 20px;
+  }
+  .reviewBox {
+    border-radius: 10px;
+    background: variables.$review_bg;
+    margin-top: 30px;
+    padding: 25px;
+    opacity: 1;
+
+    .ratingBox {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      // padding-bottom: 29px;
+
+      p {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 19px;
+        font-style: normal;
+        text-align: left;
+        color: variables.$savedCard-text;
+      }
+
+      label {
+        color: variables.$primary-bg;
+        padding-top: 3px;
+        span {
+          svg {
+            width: 30px !important;
+            height: 30px !important;
+          }
+        }
+      }
+    }
+
+    textarea,
+    input {
+      border-radius: 10px;
+      filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.16));
+      background: variables.$secondary-bg;
+      border: none;
+      width: 100% !important;
+      height: 105px;
+      padding: 14px;
+      font-size: 14px;
+      letter-spacing: normal !important;
+      margin-top: 15px;
+    }
+    input {
+      height: 50px;
+      margin-bottom: 20px;
+      margin-bottom: 15px;
+    }
+
+    ::placeholder {
+      font-weight: 200;
+      font-size: 12px;
+      color: variables.$description-text;
+      line-height: 19px;
+      font-style: normal;
+      // text-align: left;
+    }
+
+    .error {
+      font-size: 12px;
+      color: variables.$primary-bg;
+    }
+
+    label {
+      font-size: 15px !important;
+      padding-bottom: 8px;
+      font-weight: bold;
+      line-height: 19px;
+      font-style: normal;
+      // text-align: left;
+      color: variables.$savedCard-text;
+    }
+
+    .uploadPhotos {
+      margin-top: 27px;
+      font-weight: bold;
+      width: max-content;
+      text-transform: capitalize;
+      font-size: 15px;
+      line-height: 19px;
+      font-style: normal;
+      color: variables.$savedCard-text;
+      label {
+        font-size: 12px !important;
+        color: variables.$savedCard-text;
+        font-weight: 200;
+
+        line-height: 19px;
+        background-color: variables.$secondary-bg;
+        box-shadow: (0px 1px 1.5px rgba(0, 0, 0, 0.16));
+        padding: 14px 47px 15px 44px;
+        text-transform: capitalize;
+        border-radius: 10px;
+        margin-top: 8px;
+        filter: drop-shadow(0px 1px 1.5px rgba(0, 0, 0, 0.16));
+      }
+    }
+  }
+
+  .uploadImg {
+    display: flex;
+    margin-top: 28px;
+    column-gap: 8px;
+    margin-bottom: 18px;
+
+    img {
+      width: 44px;
+      height: 45px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .text {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 19px;
+    font-style: normal;
+    // text-align: left;
+    color: variables.$aed_Text;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  padding-top: 19px;
+
+  .cancelBtn {
+    border-color: variables.$border-whiteGray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 12px;
+    padding: 13px 54px;
+    background: variables.$secondary-bg;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 18px;
+    font-style: normal;
+    text-align: center;
+    color: variables.$savedCard-text;
+  }
+
+  .submitBtn {
+    border-radius: 12px;
+    background: variables.$primary-bg;
+    padding: 13px 63px;
+    border: none;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 18px;
+    font-style: normal;
+    text-align: center;
+    color: variables.$secondary-text;
+    cursor: pointer;
+  }
+}
+
+.bookingPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1200px, 80vw);
+  background: variables.$secondary-bg;
+  border-radius: 12px;
+  padding: 25px;
+
+  h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 23px;
+    font-style: normal;
+    text-align: center;
+    color: variables.$Black-text;
+    padding-bottom: 14px;
+  }
+
+  p {
+    font-weight: 200;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+    font-style: normal;
+    text-align: center;
+    color: variables.$aed_Text;
+    padding-bottom: 26px;
+  }
+
+  .form {
+    .bottom {
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 19px;
+      font-style: normal;
+      text-align: left;
+      color: variables.$aed_Text;
+    }
+
+    fieldset {
+      border-color: variables.$border-whiteGray;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 12px;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+
+    input {
+      font-weight: 200;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 19px;
+      font-style: normal;
+      text-align: left;
+      color: #5d686f;
+    }
+
+    option {
+      width: 40px;
+    }
+
+    label {
+      padding-bottom: 7px !important;
+
+      font-size: 16px;
+      font-weight: 500;
+      color: #000000;
+    }
+  }
+
+  .popupButton {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    padding-top: 30px;
+
+    .cancelBtn {
+      cursor: pointer;
+      font-weight: 200;
+
+      border-color: variables.$border-whiteGray;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 12px;
+      padding: 13px 54px;
+      background: variables.$secondary-bg;
+      text-align: center;
+      width: 50%;
+    }
+
+    .payBtn {
+      cursor: pointer;
+
+      font-weight: 200;
+      border-radius: 12px;
+      background: variables.$primary-bg;
+      padding: 13px 63px;
+      border: none;
+      color: variables.$secondary-bg;
+      text-align: center;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .voucherCard {
+    min-height: 335px !important;
+    position: relative;
+    .voucherTitle {
+      h1 {
+        font-size: 18px;
+      }
+    }
+    .iconBoxRes {
+      position: absolute;
+      left: 20px;
+      top: 150px;
+    }
+    .voucherImg {
+      width: 120px;
+      height: 120px;
+      position: relative;
+    }
+    // img {
+    //   width: 63px;
+    // }
+
+    .iconBox {
+      p {
+        font-size: 13px;
+      }
+
+      svg {
+        width: 13px;
+      }
+    }
+
+    .statusBar {
+      font-size: 11px;
+      padding: 6px;
+      padding: 5px 15px 5px 7px;
+      margin-top: 13px;
+    }
+
+    .aedBox {
+      position: absolute;
+      bottom: 105px;
+      right: 15px;
+      h2 {
+        font-size: 14px;
+      }
+    }
+
+    .buttonBox {
+      margin-left: 0px;
+      column-gap: 10px;
+      padding-top: 12px;
+    }
+
+    .left {
+      // position: relative;
+      // left: 72px;
+
+      h1 {
+        font-size: 16px;
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+      }
+
+      h2 {
+        font-size: 13px;
+        margin-bottom: 5px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        padding-bottom: 2px;
+        @media (max-width: 480px) {
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+  }
+
+  .reviewVoucher {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    border-radius: 0px !important;
+    filter: none;
+
+    .mobileView {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #7070701a;
+      padding: 20px 23px;
+
+      .mobileArrow {
+        display: block;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        color: #818990;
+        top: 20px;
+        z-index: 999;
+      }
+
+      h1 {
+        font-weight: 200;
+
+        font-size: 16px;
+        margin: auto;
+        color: #3c4a53;
+        padding-bottom: 0px;
+      }
+    }
+
+    .mobilePadding {
+      padding: 16px;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin-top: 0px;
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+
+    .iconBox {
+      p {
+        font-size: 12px;
+      }
+
+      svg {
+        width: 15px;
+      }
+    }
+
+    img {
+      width: 68px;
+      height: 68px;
+    }
+
+    .reviewBox {
+      margin: 15px;
+      padding: 20px;
+
+      .ratingBox {
+        flex-direction: column;
+        padding-bottom: 20px;
+
+        label {
+          span {
+            svg {
+              width: 21px !important;
+              height: 20px;
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+
+      .uploadPhotos {
+        label,
+        select {
+          width: 100%;
+        }
+      }
+    }
+
+    .buttonBox {
+      justify-content: center;
+      padding-bottom: 29px;
+      .cancelBtn {
+        padding: 13px 20px;
+        width: 40%;
+      }
+
+      .submitBtn {
+        padding: 13px 23px;
+        width: 50%;
+      }
+    }
+  }
+
+  .bookingPopup {
+    width: 92%;
+    padding: 18px;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .popupButton {
+      padding-top: 8px;
+      .cancelBtn {
+        padding: 13px 35px;
+      }
+
+      .payBtn {
+        padding: 13px 54px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  // .imgWrapper {
+  //   width: 170px;
+  // }
+  .textWrapper {
+    max-width: 78% !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  // .imgWrapper {
+  //   width: 140px;
+  // }
+  .textWrapper {
+    max-width: 71% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .imgWrapper {
+    width: 135px !important;
+  }
+  .textWrapper {
+    max-width: 68% !important;
+  }
+}
+@media (max-width: 768px) {
+  .voucherCard h1 {
+    font-size: 14px !important;
+  }
+  .imgWrapper {
+    width: 140px !important;
+  }
+  .textWrapper {
+    max-width: 65% !important;
+  }
+  .bookingPopup {
+    width: 82%;
+    h4 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .iconBoxRes {
+    top: 130px !important;
+  }
+  .voucherImg {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .imgWrapper {
+    width: 110px !important;
+  }
+  .textWrapper {
+    max-width: auto !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .textWrapper {
+    max-width: 60% !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .textWrapper {
+    max-width: 50% !important;
+  }
+}
+
+// @media (min-width: 320px) and (max-width: 435px) {
+//   .uploadPhotos {
+//     width: 100% !important;
+//   }
+// }
+// @media (min-width: 600px) and (max-width: 768px) {
+//   .voucherCard {
+//     .mobileCart {
+//       bottom: 0px;
+//       margin-bottom: 0px;
+//     }
+//     .left {
+//       left: 0px;
+//       h1 {
+//         font-size: 18px;
+//       }
+//     }
+//     .iconBox,
+//     .statusBar {
+//       margin-left: -76px;
+//     }
+//   }
+// }
+
+.addImageValidation {
+  color: red;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.form-control {
+  width: 50px !important;
+}
+
+.accountHeading {
+  color: #818990;
+  Button {
+    position: fixed;
+    color: #818990;
+    left: 0;
+    top: 15px;
+    z-index: 999;
+  }
+}

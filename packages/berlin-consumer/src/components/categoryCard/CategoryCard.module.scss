@@ -1,0 +1,609 @@
+@use '../../../../berlin-common/src/global-styles/variables';
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+    width: 100%;
+  }
+  .listingCard {
+    box-shadow: 0px 3px 6px variables.$card-shadow !important;
+    margin-bottom: 12px;
+    padding: 18px 22px 24px 22px;
+    width: 100%;
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      max-width: 330px;
+
+      // height: 290px;
+      .listingCardImgStyle {
+        max-width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 7px;
+        margin-bottom: 20px;
+        width: 100%;
+        margin: 0px 0px 12px 0px;
+      }
+
+      .newTag {
+        text-align: center;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        font-weight: 600;
+        font-size: 11px;
+        font-family: 'Comic Sans MS';
+        letter-spacing: 1px;
+        line-height: 18px;
+        transform: matrix(1, -1, 1, 1, -42, 12);
+        background-color: variables.$new-label;
+        color: variables.$label-text;
+        width: 126px;
+        max-width: 100%;
+      }
+    }
+
+    .destinationName {
+      font-weight: bold;
+      text-align: left;
+      font-size: 18px;
+      line-height: 30px;
+      // margin-top: 5px;
+      min-height: 21px;
+      margin-bottom: 13px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      height: 62px;
+    }
+
+    .offerAd {
+      max-width: 100%;
+      margin-bottom: 27px;
+      min-height: 42px;
+      font-size: 18px;
+      line-height: 21px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+    }
+
+    .offer {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      flex-wrap: wrap;
+
+      .offerPrice {
+        color: variables.$theme-text;
+        margin-right: 5px;
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: bold;
+      }
+
+      .offPercent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 9px;
+        background-color: variables.$rating-box;
+        color: variables.$secondary-text;
+        padding: 2px 14px;
+        font-size: 14px;
+        text-wrap: nowrap;
+      }
+    }
+
+    .orgPrice {
+      text-decoration: line-through;
+      color: variables.$org-price-text;
+      margin-top: 1px;
+      margin-bottom: 35px;
+      font-size: 16px;
+      line-height: 21px;
+      height: 16px;
+    }
+
+    .ratingAndSold {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .rating {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-color: variables.$rating-box;
+        border-radius: 9px;
+        color: variables.$secondary-text;
+        padding: 0px 14px;
+        max-width: 100%;
+        line-height: 0.1;
+
+        .numRating {
+          padding: 3px 0px 2px 0px;
+          font-size: 18px;
+          line-height: 22px;
+          font-weight: 400;
+        }
+
+        .star {
+          padding-left: 7px;
+
+          .starImgStyle {
+            vertical-align: baseline;
+            height: 14px;
+          }
+        }
+      }
+
+      .soldPackages {
+        text-decoration: underline;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: bold;
+      }
+    }
+
+    .location {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      img {
+        border-radius: 0px;
+      }
+
+      .locationLogo {
+        margin: 15px 13px 0px 0px;
+      }
+
+      .locationName {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 22px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        font-weight: bold;
+      }
+    }
+
+    .BookNow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .BookNowBtn {
+        font-weight: bold;
+        color: variables.$Black-text;
+        max-width: 100%;
+        border: 1px solid variables.$theme-border;
+        background: transparent;
+        border-radius: 25px;
+        margin-top: 31px;
+        padding: 7px 55px;
+        font-size: 22px;
+        line-height: 30px;
+        text-wrap: nowrap;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//-------------------------- laptop-tablet Responsive --------------------------
+@media (max-width: 1700px) {
+  .destinationName {
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
+
+  .listingCard {
+    padding: 10px 13px !important;
+  }
+
+  .listingCardImgStyle {
+    height: 250px !important;
+  }
+
+  .offerAd {
+    margin-bottom: 11px !important;
+    font-size: 14px !important;
+  }
+
+  .rating {
+    height: 25px;
+
+    .numRating {
+      font-size: 14px !important;
+    }
+  }
+
+  .offer {
+    .offerPrice {
+      font-size: 17px !important;
+      line-height: 20px !important;
+    }
+
+    .offPercent {
+      padding: 1px 8px 1px 8px !important;
+      font-size: 12px !important;
+      height: 24px;
+    }
+  }
+
+  .orgPrice {
+    margin-bottom: 11px !important;
+  }
+
+  .locationName {
+    font-size: 13px !important;
+  }
+
+  .BookNow {
+    .BookNowBtn {
+      width: 100% !important;
+      padding: 7px !important;
+      margin-top: 15px !important;
+      font-size: 16px !important;
+      background-color: red;
+      line-height: 24px !important;
+    }
+  }
+}
+
+@media (max-width: 991) {
+  .offerAd {
+    margin-bottom: 15px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cardContainer {
+    .listingCard {
+      padding: 13px 16px 18px 13px;
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        max-width: 330px;
+        margin: 0px auto;
+
+        .listingCardImgStyle {
+          max-width: 100% !important;
+          height: 290px;
+          border-radius: 7px;
+          margin-bottom: 10px;
+        }
+
+        .newTag {
+          font-size: 50% !important;
+          transform: matrix(1, -1, 1, 1, -17, 7);
+          width: 66px;
+        }
+      }
+
+      .destinationName {
+        font-size: 14px !important;
+        line-height: 17px !important;
+        margin-top: 10px;
+        min-height: 22px;
+      }
+
+      .offerAd {
+        margin-bottom: 11px;
+        font-size: 14px !important;
+        min-height: 30px;
+      }
+
+      .offer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .offerPrice {
+          // margin-right: 23px;
+          font-size: 14px !important;
+          line-height: 19px !important;
+        }
+
+        .offPercent {
+          padding: 1px 10px 1px 10px;
+          font-size: 8px !important;
+          line-height: 8px !important;
+          text-wrap: nowrap;
+        }
+      }
+
+      .orgPrice {
+        margin-top: 0px;
+        margin-bottom: 16px;
+        font-size: 12px !important;
+        line-height: 14px !important;
+      }
+
+      .ratingAndSold {
+        .rating {
+          align-items: center;
+          padding: 0px 11px 0px 11px;
+          height: 17px;
+          padding-bottom: 2px;
+
+          img {
+            border-radius: 0px;
+          }
+
+          .numRating {
+            padding: 1px 0px 1px 0px;
+            font-size: 13px !important;
+            line-height: 15px !important;
+          }
+
+          .star {
+            padding-left: 3px;
+
+            .starImgStyle {
+              width: 11px;
+            }
+          }
+        }
+
+        .soldPackages {
+          font-size: 11px !important;
+          line-height: 13px !important;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .locationLogo {
+          margin: 7px 7px 0px 0px;
+          width: 12px;
+        }
+
+        .locationName {
+          margin-top: 15px;
+          font-size: 11px !important;
+          line-height: 13px !important;
+        }
+      }
+
+      .BookNow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .BookNowBtn {
+          margin-top: 15px;
+          padding: 3px 28px;
+          text-wrap: nowrap;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//-------------------------- tablet-mobile Responsive --------------------------
+
+@media only screen and (max-width: 767px) {
+  .cardContainer {
+    .listingCard {
+      padding: 9px 11px 12px 11px;
+
+      @media (max-width: 380px) {
+        padding: 5px !important;
+      }
+
+      .image {
+        position: relative;
+        overflow: hidden;
+        max-width: 100%;
+        height: 150px;
+
+        .listingCardImgStyle {
+          width: 100%;
+          height: 150px !important;
+          border-radius: 7px;
+          margin-bottom: 10px;
+        }
+
+        .newTag {
+          font-size: 50%;
+          transform: matrix(1, -1, 1, 1, -17, 7);
+          width: 66px;
+        }
+      }
+
+      .destinationName {
+        font-size: 14px !important;
+        margin-bottom: 5px;
+        min-height: 60px;
+        margin-top: 8px;
+        -webkit-line-clamp: 3;
+        line-height: 20px !important;
+      }
+
+      .offerAd {
+        font-size: 13px !important;
+        min-height: 40px;
+        line-height: 20px;
+      }
+
+      .offer {
+        // display: inline-flex;
+        // flex-wrap: wrap;
+
+        .offerPrice {
+          margin-right: 5px;
+          font-size: 15px !important;
+          line-height: 20px !important;
+
+          @media (max-width: 420px) {
+            font-size: 14px !important;
+          }
+        }
+
+        .offPercent {
+          padding: 1px 10px 1px 10px;
+          font-size: 10px !important;
+          line-height: 10px;
+          text-wrap: nowrap;
+          height: 22px;
+
+          @media (max-width: 420px) {
+            height: 16px;
+          }
+        }
+      }
+
+      .orgPrice {
+        margin-top: 0px;
+        margin-bottom: 16px;
+        font-size: 10px !important;
+        line-height: 14px;
+      }
+
+      .ratingAndSold {
+        .rating {
+          align-items: center;
+          padding: 0px 11px 0px 11px;
+          height: 17px;
+          padding-bottom: 2px;
+
+          img {
+            border-radius: 0px;
+          }
+
+          .numRating {
+            padding: 6px 0px 1px 0px;
+            font-size: 11px;
+            line-height: 15px;
+          }
+
+          .star {
+            padding-left: 3px;
+
+            .starImgStyle {
+              width: 9px;
+              height: 10px !important;
+            }
+          }
+        }
+
+        .soldPackages {
+          font-size: 11px !important;
+          line-height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .locationLogo {
+          margin: 7px 7px 0px 0px;
+          width: 12px;
+        }
+
+        .locationName {
+          margin-top: 12px !important;
+          font-size: 10px !important;
+          line-height: 13px;
+        }
+      }
+
+      .BookNow {
+        .BookNowBtn {
+          margin-top: 7px !important;
+          // margin-bottom: 3px;
+          padding: 3px 10px !important;
+          font-size: 13px !important;
+          line-height: 14px;
+          text-wrap: nowrap;
+          cursor: pointer;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------  --------------------------
+
+@media (max-width: 336px) {
+  .cardContainer {
+    .listingCard {
+      .offerAd {
+        margin-bottom: 11px;
+        font-size: 9px !important;
+        line-height: 14px;
+        min-height: 32px;
+      }
+
+      .offer {
+        display: inline-flex;
+        flex-wrap: wrap;
+
+        .offerPrice {
+          margin-right: 5px;
+          font-size: 13px !important;
+          line-height: 19px;
+        }
+
+        .offPercent {
+          padding: 1px 10px 1px 10px;
+          font-size: 8px !important;
+          text-wrap: nowrap;
+          height: 15px;
+        }
+      }
+
+      .location {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .locationLogo {
+          margin: 7px 3px 0px 0px;
+          width: 11px;
+        }
+
+        .locationName {
+          margin-top: 15px;
+          font-size: 9px !important;
+          line-height: 13px;
+        }
+      }
+
+      .BookNow {
+        .BookNowBtn {
+          margin-top: 12px;
+          text-wrap: nowrap;
+          padding: 3px 27px;
+          font-size: 12px !important;
+          line-height: 17px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

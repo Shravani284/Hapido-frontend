@@ -1,0 +1,166 @@
+.singleSlot {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #fc1c15;
+}
+.slots {
+  background-color: #bfbcbc;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-top: 10px;
+  align-items: center;
+
+  //sub classes
+  .slotTime {
+    margin-right: 15px;
+    font-size: 16px;
+    padding-top: 3px;
+  }
+  .slotValues {
+    font-size: 13px;
+  }
+  .slotBooked {
+    display: flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background-color: #fc6661;
+    border: none;
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 5px;
+    span {
+      font-weight: bold;
+    }
+  }
+  .slotPrice {
+    display: flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 4px;
+    background-color: #fff4e6;
+    border: none;
+    color: #000000;
+    margin-right: 5px;
+    text-transform: uppercase;
+    span {
+      font-weight: bold;
+    }
+  }
+  .slotInventory {
+    display: flex;
+    align-items: center;
+    padding: 3px 7px;
+    margin-right: 5px;
+  }
+  .slotInventoryCount {
+    padding: 0;
+    max-width: 60px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: none;
+    margin-left: 3px;
+    input {
+      min-width: 40px;
+      text-align: center;
+      padding: 4px;
+      outline: none;
+    }
+  }
+  button:hover {
+    background-color: #fc1c15 !important;
+  }
+}
+.typePricing {
+  background-color: #bfbcbc;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-top: 1px;
+  align-items: center;
+
+  .typePrice {
+    display: flex;
+    align-items: center;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    background-color: #ffeeaa;
+    border: none;
+    color: #000000;
+    margin-right: 5px;
+  }
+  .slotPriceCount {
+    margin-left: 3px;
+    padding: 0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: none;
+    max-width: 50px;
+    input {
+      text-align: center;
+      font-size: 11px;
+      padding: 4px;
+      outline: none;
+    }
+  }
+}
+
+.saveButton {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fc1c15;
+  color: #ffffff;
+  padding: 8px;
+  font-size: 14px;
+  &:hover {
+    background-color: #fc1c15;
+    color: #ffffff;
+  }
+}
+
+.active {
+  background-color: #fc1c15;
+}
+
+.stackScroll {
+  .customScroll {
+    &::-webkit-scrollbar {
+      width: 5px; /* Width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; /* Thumb color */
+      border-radius: 5px; /* Rounded corners for the thumb */
+      height: 2px !important; /* Adjust the height to make the thumb smaller */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #555; /* Thumb color on hover */
+    }
+    scrollbar-width: thin !important;
+    scrollbar-color: #a51414 #f3f3f3 !important;
+  }
+
+  .customScroll::-webkit-scrollbar {
+    width: 1px !important; /* Width of the scrollbar */
+  }
+
+  .customScroll::-webkit-scrollbar-track {
+    background: #f3f3f3 !important; /* Track color */
+  }
+
+  .customScroll::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 5px; /* Rounded corners for the thumb */
+    height: 2px !important;
+  }
+
+  .customScroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Thumb color on hover */
+  }
+}

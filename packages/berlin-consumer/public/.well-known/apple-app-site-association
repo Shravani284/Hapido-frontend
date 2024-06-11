@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "2H422324KK.com.hapido.app",
+        "paths": [
+          "*"
+        ]
+      }
+    ]
+  }
+}

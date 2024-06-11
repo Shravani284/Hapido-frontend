@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.7.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FC1C15;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#E6E9ED;}
+</style>
+<g>
+	<g>
+		<g>
+			
+				<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -106.5616 256.4155)" class="st0" cx="256.2" cy="256.8" rx="209.7" ry="209.7"/>
+			<g>
+				<path class="st1" d="M256.3,320.1c-4.7,0-8.6-4-9.4-9.4L223,150.1c-3-20.2,10.1-38.8,27.3-38.8h11.9c17.2,0,30.3,18.5,27.3,38.8
+					l-23.8,160.5C264.9,316.1,260.9,320.1,256.3,320.1L256.3,320.1z"/>
+				<path class="st1" d="M278.1,380.5c0-12-9.8-21.8-21.8-21.8c-12,0-21.8,9.8-21.8,21.8s9.8,21.8,21.8,21.8
+					C268.3,402.3,278.1,392.5,278.1,380.5z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,20 @@
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+# base url constant temp
+urlConst.tsx
+
+node_modules
+bower_components
+yarn.lock
+
+*.sublime*
+
+psd
+thumb
+sketch
+urlConst.ts

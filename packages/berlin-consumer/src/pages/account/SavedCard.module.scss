@@ -1,0 +1,193 @@
+@use '../../../../berlin-common/src/global-styles/variables';
+
+.savedcardcontainer {
+  margin-top: 45px;
+  padding: 25px;
+  border-radius: 12px !important;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.2));
+  background: variables.$secondary-bg;
+  .paymentText {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 23px;
+    color: variables.$Black-text;
+    padding-top: 25px;
+    padding-bottom: 3px;
+  }
+  .PaymentDescription {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: variables.$description-text;
+    padding-top: 10px;
+  }
+
+  .cardviewActive.cardview {
+    border: 1px solid variables.$btn-bg;
+  }
+  .cardview {
+    border-radius: 12px;
+    border: 1px solid variables.$border-whiteGray;
+    background: variables.$secondary-bg;
+    margin-bottom: 20px;
+    .CreditcardContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 16px;
+      .imgSection {
+        display: flex;
+        flex: 1;
+        .cardLogo {
+          margin-right: 13px;
+        }
+        .nameText {
+          font-weight: 200;
+          font-size: 16px;
+          line-height: 19px;
+          padding-bottom: 5px;
+        }
+        .cardEnding {
+          font-weight: 200;
+          font-size: 14px;
+          line-height: 16px;
+          color: variables.$savedCard-text;
+        }
+      }
+      .expiryDate {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        font-weight: 200;
+        font-size: 16px;
+        color: variables.$savedCard-text;
+      }
+      .actionBtns {
+        padding: 4px;
+
+        .deleteBtn {
+          font-weight: 200;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 10px 20px;
+          border-color: variables.$aed_Text;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 8px;
+          margin-right: 14px;
+          color: variables.$aed_Text;
+          background-color: variables.$secondary-bg;
+        }
+        .defaultBtn {
+          font-weight: 200;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 10px 20px;
+          border-color: variables.$aed_Text;
+          border-width: 1px;
+          border-style: solid;
+          border-radius: 8px;
+          margin-right: 6px;
+          color: variables.$aed_Text;
+          background-color: variables.$secondary-bg;
+        }
+        .defaultBtnActive {
+          font-weight: 200;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 11px 20px;
+          color: variables.$secondary-text;
+          border-radius: 8px;
+          border: transparent;
+          background: variables.$btn-bg;
+        }
+      }
+    }
+  }
+}
+.mobileSavedCard.savedcardcontainer {
+  font-weight: 200;
+  padding-top: 65px;
+  padding: 20px;
+  // padding-top: 0;
+  margin: 0px -16px;
+  margin-bottom: 0 !important;
+  background: #ffffff !important;
+  .accountMobTopSet {
+    padding-top: 65px;
+  }
+  .accountHeader {
+    border-bottom: 1px solid #ccc;
+    z-index: 99;
+    background-color: #fff;
+    margin-left: 0px;
+    text-align: cente;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 65px;
+  }
+  .accountTitle {
+    font-weight: 200;
+    font-weight: 200;
+    font-size: 16px;
+    color: #3c4a53;
+    margin-top: 22px;
+    text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .savedcardcontainer {
+    margin-top: 26px;
+    padding: 0px;
+    background-color: variables.$card-bg !important;
+    border: none !important;
+    filter: none;
+    .paymentText {
+      font-size: 18px;
+    }
+    .cardview {
+      border: none;
+      border-radius: 8px;
+      filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.16));
+      .CreditcardContainer {
+        flex-wrap: wrap;
+        padding: 16px 15px;
+        .imgSection {
+          .nameText {
+            font-size: 15px;
+          }
+          .cardEnding {
+            font-size: 13px;
+          }
+        }
+
+        .expiryDate {
+          flex: none;
+          font-size: 13px;
+          align-items: baseline;
+        }
+        .actionBtns {
+          width: 100%;
+          display: flex;
+          justify-content: end;
+          gap: 10px;
+          margin-top: 26px;
+          .deleteBtn {
+            padding: 8px 0px;
+            width: 37%;
+            margin-right: 0px;
+            margin-left: 71px;
+          }
+          .defaultBtn,
+          .defaultBtnActive {
+            margin-left: 0px;
+            padding: 7px 0px;
+            width: 50%;
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

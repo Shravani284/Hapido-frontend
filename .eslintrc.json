@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // Not needed in React 17+
+    "react/prop-types": "off", // Not needed with TypeScript
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Not enforcing explicit return types
+    "no-unused-vars": "error", // Enforce no-unused-vars
+    "no-console": "error", // Disallow console.log
+    "no-debugger": "error", // Disallow debugger statements
+    "no-var": "error", // Disallow the use of var
+    "prefer-const": "error", // Enforce the use of const
+    "no-alert": "error", // Disallow the use of alert, confirm, and prompt
+    "no-return-assign": "error", // Disallow assignments in return statement
+    "no-param-reassign": "error", // Disallow reassigning function parameters
+    "no-shadow": "error", // Disallow variable declarations that shadow variables already declared in the outer scope
+    "prefer-arrow-callback": "error", // Prefer arrow functions over traditional function expressions
+    "arrow-body-style": "error", // Enforce the use of arrow functions for callbacks
+    "arrow-parens": ["error", "as-needed"], // Require parentheses around arrow function parameters only when there's more than one parameter
+    "object-shorthand": "error", // Require or disallow shorthand object literal methods and properties
+    "no-use-before-define": "error", // Disallow the use of variables before they are defined
+    "no-duplicate-imports": "error", // Disallow duplicate module imports
+    "import/no-duplicates": "error", // Disallow duplicate imports
+    "import/no-unresolved": "error" // Ensure imports point to a file/module that can be resolved
+  }
+}

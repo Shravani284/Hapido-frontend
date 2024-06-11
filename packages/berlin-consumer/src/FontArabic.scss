@@ -1,0 +1,121 @@
+// only arabic font family
+
+@use '../../berlin-common/src/global-styles/variables';
+@import url('../../berlin-common/assets/font/stylesheet.css');
+
+body {
+  &.lang-ar {
+    // font-family: variables.$Tajawal-regular, 'Tahoma';
+    font-family: variables.$Tajawal-regular, 'Tahoma';
+    background-color: variables.$body-bg-color;
+    button {
+      font-family: variables.$Tajawal-regular, 'Tahoma';
+    }
+    ::placeholder {
+      font-family: variables.$Tajawal-regular, 'Tahoma';
+    }
+    a {
+      font-weight: bold;
+    }
+    .otpWrapper {
+      direction: ltr;
+      label {
+        text-align: right;
+      }
+    }
+
+    .MuiTabs-scroller {
+      button {
+        font-family: variables.$Tajawal-regular, 'Tahoma' !important;
+      }
+    }
+
+    // Auto complete CSS
+    .customAutocomplete {
+      .aa-Autocomplete {
+        .aa-Form {
+          font:
+            normal 20px/27px variables.$Tajawal-regular,
+            'Open-sans',
+            sans-serif;
+        }
+      }
+    }
+    //Voucher- Time Option in booking popup css
+    .popupTime {
+      .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select,
+      .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+        font-family: variables.$Tajawal-regular, 'Tahoma' !important;
+      }
+    }
+
+    // Voucher Calender
+    .voucherCalender {
+      /* weekdays css */
+      .react-calendar__month-view__weekdays__weekday abbr {
+        font-family: variables.$Tajawal-regular, 'Tahoma';
+        font-size: 15px;
+      }
+
+      /* Month Heading */
+      .react-calendar__navigation__label__labelText {
+        font-family: variables.$Tajawal-regular, 'Tahoma';
+        font-size: 18px;
+      }
+
+      /*All Dates */
+      .react-calendar__tile {
+        div:nth-child(1) {
+          font-family: variables.$Tajawal-regular, 'Tahoma';
+          font-size: 14px;
+        }
+      }
+
+      .disabled-day {
+        font-family: variables.$Tajawal-regular, 'Tahoma';
+      }
+
+      .disabled-day::after {
+        font-family: variables.$Tajawal-regular, 'Tahoma';
+      }
+    }
+
+    .RTLAccountHeader {
+      .RTLAccountTitle {
+        font-family: variables.$Tajawal-regular, 'Tahoma';
+        font-size: 16px;
+      }
+    }
+    .RTLAddBtnMob {
+      font:
+        normal 600 12px / 19px variables.$Tajawal-regular,
+        'Open-sans',
+        sans-serif;
+    }
+    .RTLSearchInput {
+      font:
+        normal 20px/21px variables.$Tajawal-regular,
+        'Open-sans',
+        sans-serif;
+    }
+    .RTLMobSearchInput {
+      font:
+        normal 10px/20px variables.$Tajawal-regular,
+        'Open-sans',
+        sans-serif;
+      color: variables.$Black-text;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    .RTLMobileFooter {
+      div {
+        span {
+          font-family: variables.$Tajawal-regular;
+        }
+      }
+    }
+    .RTLCopyWright {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,2270 @@
+@use '../../berlin-common/src/global-styles/variables';
+@import url('../../berlin-common/assets/font/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('./FontArabic.scss');
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: variables.$body-bg-color;
+}
+
+button {
+  cursor: pointer;
+}
+
+.MuiFormHelperText-root {
+  color: variables.$primary-text;
+  padding: 4px 0px;
+  font-size: 18px !important;
+
+  @media (max-width: 768px) {
+    font-size: 14px !important;
+  }
+}
+
+:focus-visible {
+  outline: none;
+}
+
+// Consumer Container
+
+@media (min-width: 1700px) and (max-width: 2560px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1400px !important;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1700px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1320px !important;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1200px !important;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1140px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 1080px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 960px !important;
+  }
+}
+
+// Auth
+
+.form {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 13px !important;
+    border: 1px solid variables.$Field-color !important;
+  }
+}
+
+.form-field {
+  .MuiOutlinedInput-notchedOutline {
+    border-radius: 13px !important;
+    border: 1px solid variables.$Field-color !important;
+  }
+}
+
+.otp {
+  width: 100%;
+
+  .MuiOtpInput-TextField {
+    border-radius: 13px !important;
+    border: 1px solid variables.$Field-color !important;
+    background-color: variables.$Field-color;
+  }
+
+  .errorIcon {
+    color: variables.$primary-text;
+    align-self: flex-end;
+    margin: 6px 14px;
+    width: 50px;
+    height: auto;
+    display: block;
+  }
+
+  p {
+    color: variables.$Error-text;
+    font-size: 16px !important;
+    padding-top: 8px;
+  }
+}
+
+.Otperror fieldset {
+  border: 1px solid variables.$primary-border;
+  border-radius: 13px;
+}
+
+.otpWrapper fieldset {
+  border-radius: 13px;
+}
+
+::placeholder {
+  font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+  color: variables.$placeholder-text !important;
+  font-size: 20px;
+}
+
+//Product Detail Page Date Picker
+.customCalender {
+  /* React Calender */
+  .react-calendar {
+    width: 100% !important;
+    border: none !important;
+  }
+
+  /* weekdays css */
+  .react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    color: #1a1818;
+    font-size: 18px;
+    font-weight: bold;
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  .react-calendar__month-view__weekdays {
+    border-bottom: 3px solid black;
+  }
+
+  // .react-calendar__month-view__weekdays__weekday--weekend{
+  //   flex:0 0 10.3857% !important;
+
+  // }
+  // .react-calendar__month-view__weekdays__weekday{
+  //   flex:0 0 12.3857% !important;
+
+  // }
+  /* Weekend Dates */
+  .react-calendar__month-view__days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 70px);
+    justify-content: space-around;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: black;
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+  }
+
+  button:disabled {
+    color: rgba(16, 16, 16, 0.3);
+  }
+
+  /* Month Heading */
+  .react-calendar__navigation__label__labelText {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (max-width: 1600px) {
+      font-size: 22px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  .react-calendar__navigation__label:disabled {
+    background-color: transparent;
+
+    color: #1a1818;
+  }
+
+  .react-calendar__navigation__prev-button:disabled {
+    color: rgba(16, 16, 16, 0.3);
+    background-color: transparent;
+  }
+
+  /*All Dates */
+  .react-calendar__tile {
+    // position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+      padding: 5px 2px;
+    }
+
+    // flex:0 0 12.3857% !important;
+  }
+
+  /* Toady Date */
+  .react-calendar__tile--now {
+    background: none !important;
+    color: #fc1c15;
+  }
+
+  /* Selected Date */
+  .react-calendar__tile--active {
+    background: #fc1c15 !important;
+    border-radius: 8px;
+    // flex:0 0 12.3857% !important;
+  }
+
+  .react-calendar__tile--active div {
+    color: #ffffff;
+  }
+
+  /* Disabled Dates */
+  .react-calendar__tile:disabled {
+    background-color: transparent;
+  }
+
+  /* Arrow */
+  .react-calendar__navigation__arrow {
+    font-size: 30px;
+  }
+}
+
+.passFelid {
+  div {
+    border-radius: 13px !important;
+    border: 1px solid variables.$Field-color !important;
+    background-color: variables.$Field-color !important;
+
+    &:hover {
+      border-color: none !important;
+    }
+  }
+
+  .error {
+    color: variables.$Error-text;
+    font-size: 18px !important;
+    font-weight: 400;
+    padding-left: 20px;
+
+    @media (max-width: 768px) {
+      font-size: 14px !important;
+    }
+  }
+}
+
+// Slick Slider
+
+.exDeals {
+  .slick-slide {
+    img,
+    video {
+      display: block;
+      height: 285px !important;
+      padding: 10px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}
+
+.hotDeals {
+  .twoRow {
+    .slick-slider {
+      .slick-list {
+        div {
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
+}
+
+.hotDeals {
+  .twoRow {
+    .slick-track {
+      margin: 0px;
+    }
+  }
+}
+
+.hotDealsRes {
+  img,
+  video {
+    max-width: calc(100% - 20px);
+    width: 100%;
+    margin-bottom: 20px;
+    // aspect-ratio: 1/1;
+    height: 336px;
+    object-fit: cover;
+    border-radius: 0px;
+
+    @media (max-width: 1700px) {
+      height: 288px;
+    }
+
+    @media (max-width: 1500px) {
+      height: 263px;
+    }
+
+    @media (max-width: 1080px) {
+      height: 238px;
+    }
+  }
+}
+
+.travelDealsSlide {
+  .twoRow {
+    .slick-slider {
+      padding: 0px 26px;
+
+      .slick-list {
+        margin: 0 -26px;
+      }
+    }
+  }
+}
+
+.relatedProductCrard {
+  .slick-slider {
+    .slick-list {
+      .slick-slide {
+        padding: 40px 14px;
+        // width: fit-content !important;
+      }
+    }
+  }
+}
+
+.travelText {
+  width: 50%;
+
+  @media screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+// Tabs on Product Details Page
+
+.MuiTabs-scroller {
+  button {
+    color: variables.$Black-text;
+    text-transform: capitalize;
+    padding: 20px !important;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+
+    // &:last-child {
+    //   &::after {
+    //     display: none;
+    //   }
+    // }
+
+    // &::after {
+    //   position: absolute !important;
+    //   content: '';
+    //   width: 1px;
+    //   height: 38px;
+    //   background-color: lightgrey;
+    //   right: 0;
+    //   margin-right: 2px;
+    // }
+
+    @media screen and (max-width: 1600px) {
+      // padding: 20px 20px !important;
+      font-size: 20px !important;
+    }
+  }
+
+  .Mui-selected {
+    color: variables.$Black-text !important;
+  }
+
+  .MuiTabs-indicator {
+    background-color: variables.$primary-bg !important;
+    height: 4px;
+  }
+}
+
+.selectedBorder {
+  @media screen and (max-width: 768px) {
+    background-color: #f4fcf4 !important;
+  }
+
+  > div {
+    border: 1px solid variables.$cart-input;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+      border: 1px solid #f4fcf4;
+    }
+  }
+
+  .kxoGii {
+    height: 2.5em !important;
+    padding: 10px !important;
+
+    @media screen and (max-width: 768px) {
+      padding: 0px !important;
+    }
+
+    .saveCard {
+      .radioButtonIcon {
+        padding-top: 14px;
+        margin-left: 0px;
+
+        @media (min-width: 658px) and (max-width: 768px) {
+          margin-left: 8px !important;
+        }
+      }
+    }
+  }
+}
+
+.cardPlace {
+  ::placeholder {
+    color: red !important;
+  }
+
+  input {
+    @media screen and (max-width: 425px) {
+      font-size: 14px !important;
+    }
+  }
+}
+
+.paymentWrapper {
+  width: 80%;
+  border: 1px solid #f4fcf4;
+  border-radius: 10px;
+  background-color: #f4fcf4;
+  margin-bottom: 20px;
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    width: 99%;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-color: transparent;
+    width: 95%;
+  }
+
+  > div {
+    width: 100%;
+  }
+
+  > div > div {
+    //when click the form
+    background: transparent;
+    box-shadow: none;
+    border: none;
+
+    input {
+      color: black;
+      background: transparent;
+      font-size: 18px;
+      text-align: left;
+      padding-left: 10px !important;
+
+      @media screen and (max-width: 420px) {
+        padding-left: 5px !important;
+      }
+    }
+
+    // price slider
+    .css-1diafny-MuiSlider-root {
+      color: variables.$primary-bg !important;
+    }
+
+    #cardNumber {
+      width: 100%;
+    }
+
+    #expiryDate {
+      width: 5em;
+      text-align: center;
+      padding-left: 10px;
+    }
+
+    .cardImg {
+      position: relative;
+      left: -5px;
+      margin-right: 20px;
+    }
+
+    .leftBorder {
+      border-left: 0.5px solid #bebbbb6a;
+      text-align: center;
+      line-height: 2.2;
+    }
+
+    .icon {
+      position: relative;
+      right: 7px;
+      top: 4px;
+    }
+
+    svg {
+      margin-right: 0px;
+    }
+
+    .saveCard {
+      width: 100%;
+      justify-content: space-between;
+
+      .cardNo {
+        width: fit-content;
+        padding: 0px 20px 0px 0px;
+        font-weight: 400;
+        text-wrap: nowrap;
+
+        @media screen and (max-width: 400px) {
+          padding: 0px 0px 0px 0px !important;
+        }
+
+        span {
+          color: variables.$Black-text !important;
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 6px;
+        }
+      }
+
+      .cvv {
+        display: block;
+        border-left: 0.5px solid #bebbbb6b;
+        line-height: 2;
+      }
+
+      ::placeholder {
+        color: variables.$Black-text !important;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .sc-dkjKgF,
+  .cqKOnk {
+    display: none;
+  }
+
+  .kxoGii {
+    font-size: 20px;
+
+    @media screen and (max-width: 420px) {
+      font-size: 14px;
+      padding: 0px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .paymentWrapper {
+      > div > div {
+        #expiryDate {
+          width: 5em;
+        }
+
+        .icon {
+          top: 5px;
+        }
+      }
+    }
+
+    .paymentWrapperInput {
+      > div > div {
+        .icon {
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 658px) {
+    width: 100% !important;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .gGudTC,
+    .kxoGii,
+    .hShBK,
+    .gCmtQq {
+      padding: 0px;
+      height: 2.5em !important;
+
+      input {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+      }
+
+      #cvc {
+        width: 9%;
+        text-align: center;
+      }
+
+      .cardImg {
+        left: 0px;
+        padding-right: 0px;
+        margin-right: 10px;
+
+        @media screen and (max-width: 420px) {
+          left: -4px;
+          padding-right: 0px;
+          margin-right: 3px;
+        }
+      }
+
+      // .leftBorder {
+      //   height: 35px;
+      //   margin-bottom: 16px;
+      // }
+
+      .icon {
+        left: -4px;
+        height: 20px;
+        top: 3px;
+      }
+
+      .saveCard {
+        .cvv {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.paymentWrapperInput {
+  width: 80%;
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    width: 99%;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-color: transparent;
+    width: 95%;
+  }
+
+  margin-bottom: 20px;
+  padding: 8px 0px;
+
+  > div {
+    width: 100%;
+  }
+
+  > div > div:first-child {
+    border: 1px solid #f4fcf4;
+    border-radius: 10px;
+    background-color: #f6f8fb;
+
+    box-shadow: none;
+    border: none;
+
+    input {
+      color: black;
+      background: transparent;
+      font-size: 18px;
+      text-align: left;
+      padding-left: 10px !important;
+
+      @media screen and (max-width: 420px) {
+        padding-left: 0px !important;
+      }
+    }
+
+    // price slider
+    .css-1diafny-MuiSlider-root {
+      color: variables.$primary-bg !important;
+    }
+
+    #cardNumber {
+      width: 100%;
+    }
+
+    #expiryDate {
+      text-align: center;
+      padding-left: 10px;
+    }
+
+    .cardImg {
+      position: relative;
+      left: -5px;
+      margin-right: 20px;
+
+      @media screen and (max-width: 425px) {
+        margin-right: 4px;
+      }
+    }
+
+    .leftBorder {
+      border-left: 0.5px solid #bebbbb6a;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .icon {
+      position: relative;
+      right: 0px;
+      top: 4px;
+    }
+
+    svg {
+      margin-right: 0px;
+    }
+
+    .saveCard {
+      width: 100%;
+      justify-content: space-between;
+
+      .cardNo {
+        width: fit-content;
+        padding: 0px 40px 0px 0px;
+        font-weight: 400;
+        text-wrap: nowrap;
+
+        @media screen and (max-width: 400px) {
+          padding: 0px 0px 0px 0px !important;
+        }
+
+        span {
+          color: variables.$Black-text !important;
+          font-size: 16px;
+          font-weight: 600;
+          padding-left: 6px;
+        }
+      }
+
+      .cvv {
+        display: block;
+        border-left: 0.5px solid #bebbbb6b;
+        line-height: 2.2;
+      }
+
+      ::placeholder {
+        color: variables.$Black-text !important;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .sc-dkjKgF,
+  .cqKOnk {
+    display: none;
+  }
+
+  .kxoGii {
+    font-size: 20px;
+
+    @media screen and (max-width: 420px) {
+      font-size: 14px;
+      padding: 0px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .paymentWrapper {
+      > div > div {
+        #expiryDate {
+          width: 5em;
+        }
+
+        .icon {
+          top: 5px;
+        }
+      }
+    }
+
+    .paymentWrapperInput {
+      > div > div {
+        .icon {
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 658px) {
+    width: 100% !important;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .gGudTC,
+    .kxoGii,
+    .hShBK,
+    .gCmtQq {
+      padding: 0px;
+      height: 2.5em !important;
+
+      input {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      ::placeholder {
+        font-size: 14px;
+      }
+
+      .cardImg {
+        left: 0px;
+        padding-right: 0px;
+        margin-right: 10px;
+
+        @media screen and (max-width: 420px) {
+          left: -4px;
+          padding-right: 0px;
+          margin-right: 3px;
+        }
+      }
+
+      .icon {
+        left: -4px;
+        height: 20px;
+        top: 3px;
+      }
+
+      .saveCard {
+        .cardNo {
+          width: 70%;
+
+          @media screen and (max-width: 420px) {
+            padding: 0px;
+          }
+        }
+
+        .cvv {
+          text-align: center;
+          padding-left: 5px !important;
+        }
+      }
+    }
+  }
+}
+
+// slider responsive
+.mobSlider,
+.categorySliderMobSlider {
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    opacity: 0.6;
+    background: variables.$secondary-bg;
+    content: '';
+    text-align: center;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    background-color: variables.$primary-bg;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+}
+
+.offerSlider {
+  .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 6px;
+    opacity: 0.6;
+    background: lightgray;
+    content: '';
+    text-align: center;
+    color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    background-color: gray;
+  }
+
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 0px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .slick-track {
+    margin: 0px;
+  }
+}
+
+.offerSlider {
+  img {
+    border-radius: 10px;
+    margin: 12px 0px;
+  }
+}
+
+.mobPromo {
+  img,
+  video {
+    height: 165px !important;
+    object-fit: cover;
+    border-radius: 0px;
+  }
+}
+
+// tab
+@media (min-width: 320px) and (max-width: 768px) {
+  .MuiTabs-scroller {
+    button {
+      font-size: 14px !important;
+      color: variables.$Black-text;
+      text-transform: capitalize;
+      padding: 18px 10px !important;
+      font-weight: 600;
+    }
+
+    .Mui-selected {
+      color: variables.$Black-text !important;
+    }
+
+    .MuiTabs-indicator {
+      background-color: variables.$primary-bg !important;
+      height: 4px;
+    }
+  }
+
+  .overview {
+    .MuiTabPanel-root {
+      padding: 0px;
+    }
+  }
+}
+
+// .mobileFooter {
+// TODO: Mobile bottom tab active css code
+//   button {
+//     .Mui-selected {
+//       color: variables.$primary-text !important;
+
+//       @media screen and (max-width: 375px) {
+//         font-size: 0.75rem !important;
+//       }
+//     }
+//   }
+// }
+
+//? Delete PopUp for Saved Cards
+// ConsumerConfirmBoxAlert Component css
+.cardContainer {
+  .MuiDialog-paper.MuiDialog-paperScrollPaper {
+    border-radius: 12px !important;
+    min-width: 290px;
+  }
+
+  .MsgText {
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+//? Snackbar Css
+.MuiAlert-standardSuccess {
+  background-color: #31a408 !important;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16) !important;
+  border-radius: 12px !important;
+  color: variables.$PopupPrimary-text !important;
+
+  .MuiAlert-icon {
+    display: none !important;
+  }
+}
+
+//? Delete PopUp for Saved Cards
+// ConsumerConfirmBoxAlert Component css
+.cardContainer {
+  .MuiDialog-paper.MuiDialog-paperScrollPaper {
+    border-radius: 12px !important;
+  }
+
+  .MsgText {
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+//? Snackbar Css
+.MuiAlert-standardSuccess {
+  background-color: #31a408 !important;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16) !important;
+  border-radius: 12px !important;
+  color: variables.$PopupPrimary-text !important;
+
+  .MuiAlert-icon {
+    display: none !important;
+  }
+}
+
+//Voucher- Time Option in booking popup css
+.popupTime {
+  .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select,
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif !important;
+    font-weight: 200;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    color: #5d686f !important;
+
+    span {
+      color: #a9adb3 !important;
+    }
+  }
+}
+
+// Voucher Calender
+.voucherCalender {
+  /* React Calender */
+  .react-calendar {
+    width: 100% !important;
+    border: none !important;
+  }
+
+  /* weekdays css */
+  .react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 19px;
+    text-transform: none;
+    /* font-style: normal; */
+    /* text-align: left; */
+    color: #3c4a53;
+  }
+
+  /* Weekend Dates */
+  .react-calendar__month-view__days {
+    // display: grid !important;
+    grid-template-columns: repeat(7, 70px);
+    // justify-content: space-around;
+
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: black;
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+  }
+
+  button:disabled {
+    color: rgba(16, 16, 16, 0.3);
+  }
+
+  /* Month Heading */
+  .react-calendar__navigation__label__labelText {
+    text-transform: none;
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+  }
+
+  .react-calendar__navigation__label:disabled {
+    background-color: transparent;
+
+    color: #1a1818;
+  }
+
+  .react-calendar__navigation__prev-button:disabled {
+    color: rgba(16, 16, 16, 0.3);
+    background-color: transparent;
+  }
+
+  /*All Dates */
+  .react-calendar__tile {
+    position: relative;
+
+    // flex:0 0 12.3857% !important;
+    div:nth-child(1) {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+      font-size: 14px;
+      font-weight: 200;
+      // color: #3c4a53;
+    }
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  /* Toady Date */
+  .react-calendar__tile--now {
+    background: none !important;
+    color: #fc1c15 !important;
+  }
+
+  /* Selected Date */
+  .react-calendar__tile--active {
+    background: transparent !important;
+    color: #757575;
+    border-radius: 8px;
+
+    // flex:0 0 12.3857% !important;
+    div {
+      color: #757575;
+    }
+
+    div:nth-child(1) {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: variables.$primary-bg;
+      line-height: 32px;
+      color: #fff;
+    }
+  }
+
+  /* Disabled Dates */
+  .react-calendar__tile:disabled {
+    background-color: transparent;
+    color: #818990;
+  }
+
+  /* Arrow */
+  .react-calendar__navigation {
+    margin-bottom: 0;
+  }
+
+  .react-calendar__navigation__arrow {
+    font-size: 23px;
+  }
+
+  .react-calendar__month-view__days__day--weekend {
+    color: black;
+  }
+
+  .react-calendar__month-view__days__day--neighboringMonth {
+    color: #757575;
+  }
+
+  button:disabled {
+    color: rgba(16, 16, 16, 0.3);
+  }
+
+  .disabled-day {
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+    font-style: normal;
+    text-align: center;
+    color: #818990 !important;
+  }
+
+  .disabled-day::after {
+    content: url(../assets/calenderLine.svg);
+    position: absolute;
+    top: 20px;
+    left: 50% !important;
+    transform: scale(1.5);
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+    font-style: normal;
+    text-align: center;
+    color: #818990 !important;
+    transform: translateX(-50%) scale(1.5);
+  }
+
+  .diagonal-line {
+    pointer-events: none;
+    /* Disable click events */
+  }
+
+  .react-calendar__tile--active .active-date {
+    background: #fc1c15 !important;
+    border-radius: 50%;
+  }
+}
+
+.prizeRange {
+  .MuiSlider-sizeMedium {
+    color: variables.$primary-bg;
+    font-size: 14px !important;
+    font-weight: bold !important;
+  }
+
+  .MuiSlider-rail {
+    color: #00000029 !important;
+  }
+}
+
+.travelDealsSlide {
+  .slick-track {
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.mobSlider {
+  video {
+    border-radius: 0px !important;
+  }
+}
+
+// Responsive Filter
+
+.resSort {
+  .MuiDrawer-paper {
+    height: 85vh;
+    border-radius: 32px 32px 0px 0px;
+  }
+}
+
+.resFilterDrawer {
+  .MuiDrawer-paper {
+    border-radius: 32px 32px 0px 0px;
+  }
+}
+
+.productDetailSlider {
+  img,
+  video {
+    height: 420px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.breadcrumbsDivider {
+  padding: 8px;
+
+  @media screen and (max-width: 768px) {
+    padding: 4px;
+  }
+}
+
+.readMoreBtn {
+  color: variables.$primary-text;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px !important;
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+    font-size: 15px !important;
+  }
+}
+
+.whatAppLogo {
+  img {
+    width: 50px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    @media screen and (max-width: 768px) {
+      right: 10px;
+      bottom: 85px;
+      z-index: 9999;
+    }
+  }
+}
+
+.scrollHighlight {
+  position: relative;
+  background: transparent;
+}
+
+.scrollHighlight:before,
+.scrollHighlight:after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  background: linear-gradient(
+    45deg,
+    #fb2100,
+    #fb1d14,
+    #ff4400,
+    #ff0000,
+    #fb0094,
+    #fb1d14,
+    #ff0059,
+    #ff0000
+  );
+  opacity: 0.5;
+  background-size: 10%;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: -1;
+  animation: steam 5s linear infinite;
+  border-radius: 20px;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.scrollHighlight:after {
+  filter: blur(10px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 640px;
+  width: 100%;
+}
+
+// Auto complete CSS
+.customAutocomplete {
+  .aa-Autocomplete {
+    .aa-Form {
+      width: 100%;
+      background-color: variables.$secondary-bg;
+      border-radius: 30px;
+      border: none;
+      outline: 0;
+      // padding: 13px 40px 16px 25px;
+      font-size: 20px;
+      font-weight: 27px;
+      color: variables.$Black-text;
+      font-family: inherit;
+    }
+    .aa-InputWrapperPrefix {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 44px;
+      order: 1;
+      right: 0px !important;
+      .aa-Label {
+        .aa-SubmitButton {
+          .aa-SubmitIcon {
+            color: #fb1d14;
+            height: auto;
+            max-height: 20px;
+            stroke-width: 1.6;
+            width: 20px;
+          }
+        }
+      }
+      .aa-LoadingIndicator {
+        color: #fb1d14;
+        height: auto;
+        max-height: 20px;
+        stroke-width: 1.6;
+        width: 20px;
+      }
+    }
+    .aa-InputWrapper {
+      .aa-Input {
+        font-size: 16px;
+
+        &::placeholder {
+          color: variables.$search-input;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .aa-Form {
+    border: 1px solid #fb1d14;
+    outline: none;
+    .aa-SubmitButton {
+      .aa-SubmitIcon {
+        color: #fb1d14;
+      }
+    }
+  }
+  .aa-Panel {
+    z-index: 9999 !important;
+    position: fixed !important;
+    width: 450px !important;
+    top: 56px !important;
+    .aa-Item {
+      font-size: 14px;
+      padding: 5px;
+    }
+    .aa-ItemWrapper--seeAll {
+      cursor: pointer;
+      margin-bottom: 8px;
+      &:hover {
+        color: #fb1d14;
+      }
+      .result-text {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.aa-ItemContentDescription {
+  font-size: 14px;
+  color: #1a1818;
+  line-height: 24px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+
+.aa-PanelLayout {
+  .search-img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #f2f2f3;
+    border-radius: 8px;
+  }
+  .search-img img {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .aa-Panel {
+    left: 0 !important;
+    width: 100% !important;
+    position: fixed;
+    z-index: 9999;
+    top: 56px !important;
+  }
+  .customAutocomplete {
+    button {
+      border: none !important;
+      border-radius: 20px !important;
+      .aa-DetachedSearchButtonIcon {
+        color: #fb1d14;
+      }
+    }
+    .aa-Form {
+      &:focus-within {
+        outline: none;
+        border-color: #fb1d14;
+      }
+      .aa-InputWrapperPrefix {
+        width: 30px;
+      }
+    }
+  }
+  .aa-ItemWrapper--seeAll {
+    cursor: pointer;
+    margin-bottom: 8px;
+    &:hover {
+      color: #fb1d14;
+    }
+    .result-text {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .customAutocomplete {
+    button {
+      .aa-DetachedSearchButtonIcon {
+        width: 25px;
+      }
+      .aa-DetachedSearchButtonPlaceholder {
+        font-size: 13px;
+      }
+    }
+    .aa-InputWrapper {
+      .aa-Input {
+        font-size: 14px !important;
+
+        &::placeholder {
+          color: variables.$search-input;
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .customAutocomplete {
+    button {
+      .aa-DetachedSearchButtonIcon {
+        width: 25px;
+        padding-right: 5px;
+      }
+      .aa-DetachedSearchButtonPlaceholder {
+        font-size: 10px;
+      }
+    }
+
+    .aa-InputWrapper {
+      .aa-Input {
+        font-size: 12px !important;
+
+        &::placeholder {
+          color: variables.$search-input;
+          font-size: 11px !important;
+        }
+      }
+    }
+  }
+}
+
+//Preview Image modal for review images
+.previewModal {
+  max-height: 600px;
+  max-width: 100%;
+
+  img {
+    max-height: 600px !important;
+    height: 600px;
+    object-fit: contain;
+  }
+}
+
+.signin-button > div > div > svg {
+  font-size: 16px;
+  height: 45px;
+  width: 100%;
+}
+
+.drawerWithBackdrop .MuiBackdrop-root {
+  display: none;
+}
+
+.savePM {
+  &.selected {
+    background-color: antiquewhite;
+  }
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  @media (max-width: 900px) {
+    padding: 10px !important;
+  }
+  ul {
+    li {
+      padding: 2px;
+    }
+  }
+}
+
+body {
+  &.lang-en {
+    font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    background-color: variables.$body-bg-color;
+    button {
+      font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+    }
+    .RtltopNextArrow {
+      right: -15px;
+    }
+    .RtltopPrevArrow {
+      right: 14px !important;
+    }
+    .RtlflashArrow {
+      .prevBtn {
+        right: 29px !important;
+      }
+
+      .nextBtn {
+        right: 10px !important;
+      }
+    }
+    .flashArrow {
+      .prevBtn {
+        right: 29px !important;
+      }
+
+      .nextBtn {
+        right: 0px !important;
+      }
+    }
+
+    .RtllocationText {
+      div {
+        padding-right: 12px !important;
+      }
+    }
+    .RtlbeforeText {
+      margin-right: 10px !important;
+    }
+    .RtlnowAed {
+      margin-right: 4px !important;
+    }
+    .RTLshareIconPlace {
+      right: 0 !important;
+    }
+    .RTLdetails {
+      padding-left: 28px !important;
+    }
+    .RTLsocialImg {
+      margin-left: 15px !important;
+      margin-right: 5px !important;
+    }
+    .MuiTabs-scroller {
+      button {
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+
+        &::after {
+          position: absolute !important;
+          content: '';
+          width: 1px;
+          height: 38px;
+          background-color: lightgrey;
+          right: 0;
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+  &.lang-ar {
+    .MuiAlert-action {
+      padding: 4px 15px;
+      button {
+        position: absolute;
+        left: 3px;
+      }
+    }
+    .react-calendar__month-view__days {
+      display: grid !important;
+      grid-template-columns: repeat(7, 70px);
+      justify-content: space-around;
+      @media (max-width: 1400px) {
+        grid-template-columns: repeat(7, 1fr);
+      }
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(7, 1fr);
+      }
+    }
+    direction: rtl;
+    .RTLComponent {
+      direction: rtl;
+    }
+    .RTLHeaderSignInText {
+      font-size: 15px;
+      img {
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+    }
+    .RTLAlignRight {
+      text-align: right !important;
+    }
+    .RTLAlignLeft {
+      text-align: left !important;
+    }
+    .RTLsocialImg {
+      text-align: left !important;
+      margin-left: 5px !important;
+      margin-right: 15px !important;
+    }
+    .RTLFooterLogo {
+      float: left !important;
+      transform: scaleX(-1) !important;
+    }
+    .RtltopNextArrow {
+      left: 43px !important;
+    }
+    .RtltopPrevArrow {
+      left: 14px !important;
+    }
+    .RtlcardContainerWidth {
+      margin-left: 16px !important;
+    }
+    .Rtllocation {
+      img {
+        margin-right: 0px !important;
+        margin-left: 16px !important;
+      }
+      div {
+        padding-left: 12px !important;
+        padding-right: 0px !important;
+      }
+    }
+    .Rtldiscount {
+      margin-right: 10px !important;
+      margin-left: 0px !important;
+    }
+    .RtllocationText {
+      margin-right: 9px !important;
+      margin-left: 0px !important;
+      div {
+        padding-left: 12px;
+      }
+    }
+    .RtlbeforeText {
+      margin-left: 10px !important;
+    }
+    .RtlnowAed {
+      margin-left: 4px !important;
+      display: flex !important;
+    }
+    .RtlCurrentPrice {
+      display: flex !important;
+    }
+    .RtlflashArrow {
+      .prevBtn {
+        left: 30px !important;
+      }
+
+      .nextBtn {
+        left: 60px !important;
+      }
+    }
+    .RtlnowAedRes {
+      display: flex !important;
+    }
+    .RTLcategoryBreadcrumb {
+      text-align: right !important;
+      justify-content: flex-end !important;
+    }
+    .RTLdestinationName {
+      text-align: right !important;
+    }
+    .RTLlocationLogo {
+      margin: 15px 0px 0px 13px !important;
+    }
+    .RTLstar {
+      padding: 0px 7px 0px 0px !important;
+    }
+    @media only screen and (max-width: 767px) {
+      .RTLstar {
+        padding: 0px 3px 0px 0px !important;
+      }
+      .RTLlocationLogo {
+        margin: 7px 0px 0px 3px !important;
+      }
+    }
+    .RTLsortIcon {
+      margin-left: 10px !important;
+    }
+
+    .RTLofferPrice {
+      margin: 0px 0px 0px 5px !important;
+    }
+    .RTLfilterIcon {
+      padding-left: 6px !important;
+    }
+    .RTLshareIconPlace {
+      position: absolute !important;
+      left: 0 !important;
+      right: auto !important;
+    }
+    .RTLproductInfo {
+      h4 {
+        margin-right: 0px !important;
+        margin-left: 50px !important;
+      }
+    }
+    .RTLnewRate {
+      margin-right: 10px;
+      // display: flex !important;
+    }
+    // .shareIconPlace{
+    // }
+    .RTLproductInfoMob {
+      .placeName {
+        margin-right: 0px !important;
+        margin-left: 35px !important;
+        font-weight: bold;
+      }
+    }
+    .RTLdetails {
+      padding-right: 28px !important;
+      img {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+    .RTLoffer {
+      margin-right: 10px !important;
+    }
+    .RTLMobRating {
+      .css-111wug5 {
+        // padding-left: 8px !important;
+        padding: 0px 0px 0px 8px !important;
+      }
+    }
+    .MuiTabs-scroller {
+      button {
+        &:first-child {
+          &::before {
+            display: none;
+          }
+        }
+
+        &::before {
+          position: absolute !important;
+          content: '';
+          width: 1px;
+          height: 38px;
+          background-color: lightgrey;
+          right: 0;
+          margin-right: 2px;
+        }
+      }
+    }
+    .RTLcaptions {
+      direction: ltr !important;
+      display: inline-flex !important;
+    }
+    .RTLrightCard {
+      padding: 0px 20px 0px 0px !important;
+      @media (max-width: 768px) {
+        padding: 0px !important;
+      }
+    }
+    // background-color: red !important;
+
+    .RTLHeadingSavedCards {
+      img {
+        margin-right: 16px;
+      }
+    }
+    .RTLFooterLink {
+      a {
+        text-align: right !important;
+      }
+    }
+    .RTLRating {
+      text-align: right !important;
+    }
+    .RTLCountryFlag {
+      input {
+        direction: ltr;
+        text-align: right;
+      }
+    }
+    .PhoneInputCountryIcon {
+      margin-left: 15px;
+    }
+    .RTLCategoryInterestItem {
+      text-align: right !important;
+    }
+    .RTLRightSpace {
+      margin-left: 0px !important;
+      margin-right: 30px !important;
+    }
+    .RTLImageContainer {
+      .RTLOverlay {
+        left: 0 !important;
+        position: absolute;
+        background: linear-gradient(
+          90deg,
+          rgb(255, 255, 255) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+        width: 125px;
+        z-index: 1;
+        height: 100%;
+      }
+      .RTLAddressTypeLabel {
+        position: absolute;
+        top: 16px;
+        right: 15px;
+        background-color: #fb1d14;
+        border-radius: 3px;
+        padding: 5px 7px 3px;
+        font-size: 11px;
+        line-height: 13px;
+        font-style: normal;
+        color: #fff;
+        z-index: 1;
+      }
+    }
+    .RTLName,
+    .RTLAddress {
+      text-align: right !important;
+      font-weight: bold;
+    }
+    .RTLEditIcon,
+    .RTLDeleteIcon {
+      margin-right: 0 !important;
+      margin-left: 20px !important;
+    }
+    .RTLLeft {
+      h1,
+      h2 {
+        text-align: right;
+      }
+    }
+    .RTLAddDealsButton {
+      font-size: 18px !important;
+    }
+    .RTLLanguageBtn {
+      margin-left: 0px !important;
+      margin-right: 3px;
+      button {
+        padding: 14px 20px 7px 20px;
+        color: #707070;
+        font-weight: 700;
+        @media (max-width: 900px) {
+          padding: 14px 10px 7px 10px;
+          float: left;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .pRight30 {
+        padding-right: 20px !important;
+      }
+      .RTLBackHeader {
+        margin-right: 15px !important;
+      }
+      .RTLBackArrow {
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+      }
+      .RTLRightIcon {
+        z-index: 9999;
+        position: absolute;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+      }
+      .RTLCloseDrawer {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+      }
+      .RTLSidebarMenuTitle {
+        padding-right: 15px;
+        font-size: 14px;
+      }
+      .RTLSidebarList {
+        .RTLIcon,
+        .RTLText {
+          padding-left: 10px !important;
+        }
+      }
+
+      .RTLAccountHeading {
+        color: #818990;
+
+        Button {
+          position: fixed;
+          color: #818990;
+          right: 0;
+          top: 15px;
+          z-index: 999;
+          transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+        }
+      }
+      .RTLAccountHeader {
+        border-bottom: 1px solid #ccc;
+        z-index: 99;
+        background-color: #fff;
+        margin-left: -20px;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: 65px;
+        right: 0 !important;
+        .RTLAccountTitle {
+          font-family: variables.$Roboto-regular, 'Open-sans', sans-serif;
+          font-weight: 200;
+          font-size: 16px;
+          color: #3c4a53;
+          margin-top: 22px;
+          text-align: center;
+        }
+      }
+      .RTLAddBtnMob {
+        cursor: pointer;
+        position: absolute;
+        left: 34px;
+        top: 20px;
+        font-size: 12px;
+        font-weight: 19px;
+        width: 85px;
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+        background-color: #ffd7ca;
+        color: #3c4a53;
+      }
+    }
+    .RTLWhatAppLogo {
+      img {
+        width: 50px;
+        position: fixed;
+        left: 40px;
+        bottom: 40px;
+        @media screen and (max-width: 768px) {
+          left: 10px;
+          bottom: 85px;
+          z-index: 9999;
+        }
+      }
+    }
+    .RTLSearchIcon {
+      position: absolute;
+      top: 14px;
+      left: 34px;
+      @media (max-width: 2000px) {
+        top: 9px;
+        left: 24px;
+        img {
+          width: 24px;
+        }
+      }
+
+      img {
+        width: 24px;
+        @media (max-width: 1700px) {
+          width: 20px;
+        }
+      }
+    }
+    .RTLMobSearchIcon {
+      position: absolute;
+      top: 8px;
+      left: 20px;
+
+      img {
+        width: 18px;
+      }
+    }
+    @media (max-width: 400px) {
+      .mobSearchIcon {
+        top: 6px;
+        left: 18px;
+
+        img {
+          width: 14px;
+        }
+      }
+    }
+    .RTLSearchInput {
+      width: 100%;
+      background-color: variables.$secondary-bg;
+      border-radius: 30px;
+      border: none;
+      outline: 0;
+      padding: 13px 25px 16px 40px;
+      font-size: 20px;
+      font-weight: 17px;
+      color: variables.$Black-text;
+      font-family: inherit;
+
+      &::placeholder {
+        color: variables.$search-input;
+      }
+
+      @media (max-width: 2000px) {
+        padding: 9px 20px 9px 40px;
+        font-size: 16px;
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 1440px) {
+        padding: 8px 20px 8px 40px;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      // @media (max-width: 1200px) {
+      //   &::placeholder {
+      //     font-size: 14px;
+      //   }
+      // }
+    }
+    .RTLMobSearchInput {
+      width: 100%;
+      background-color: variables.$secondary-bg;
+      border-radius: 30px;
+      border: none;
+      outline: 0;
+      padding: 10px 13px 10px 35px;
+      font-size: 10px;
+      font-weight: 20px;
+      color: variables.$Black-text;
+      font-family: inherit;
+      font-size: 14px;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+      @media (max-width: 400px) {
+        padding: 10px 10px 10px 27px;
+      }
+
+      &::placeholder {
+        margin: 0 0 10px 20px;
+        color: variables.$search-input;
+        font-size: 14px;
+        padding-right: 1px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+        @media (max-width: 400px) {
+          font-size: 11px;
+        }
+      }
+    }
+    .RTLMobileFooter {
+      div {
+        height: 75px;
+        // padding: 8px 0px;
+        min-width: 0px;
+        justify-content: space-evenly;
+        button {
+          @media screen and (max-width: 400px) {
+            min-width: 40px !important;
+          }
+        }
+        img {
+          width: 26px;
+          padding-bottom: 8px;
+        }
+
+        span {
+          font-size: 12px;
+          font-family: variables.$Tajawal-regular;
+          font-weight: 600;
+          color: variables.$Black-text;
+          text-wrap: nowrap;
+          opacity: 1;
+
+          @media screen and (max-width: 374px) {
+            font-size: 10px;
+          }
+        }
+      }
+      .RTLRatingDropDown {
+        .RTLListLabel {
+          padding-right: 0 !important;
+        }
+      }
+    }
+    .RTLBackToLogin {
+      position: absolute;
+      left: 21px;
+      top: 48px;
+      font-size: 18px;
+
+      @media (max-width: 1700px) {
+        font-size: 14px !important;
+      }
+
+      .login {
+        color: #0b0080;
+        padding-left: 4px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .RTLPlaceName {
+      font-weight: bold;
+    }
+  }
+  .readMoreBtn {
+    text-align: left !important;
+  }
+  .RTLHighlightText {
+    font-size: 15px !important;
+  }
+  .RTLAddAddressBtn {
+    font-weight: bold;
+    .RTLAddSymbol {
+      margin-left: 12px;
+      margin-right: 2px !important;
+    }
+  }
+  .RTLTravelOfferRes {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}

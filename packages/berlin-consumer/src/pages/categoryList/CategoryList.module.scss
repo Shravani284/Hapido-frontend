@@ -1,0 +1,130 @@
+@use '../../../../berlin-common/src/global-styles/variables';
+
+.categoryBreadcrumb {
+  a {
+    cursor: pointer;
+    font-size: 14px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+}
+.offerImage {
+  img {
+    width: 100%;
+  }
+}
+
+.categorySlider {
+  margin: 20px 0px 60px 0px;
+
+  img,
+  video {
+    border-radius: 30px;
+    height: 320px;
+    object-fit: cover;
+  }
+}
+
+.catContainer {
+  margin: 40px 0px;
+  overflow-x: scroll;
+  flex-direction: row;
+  gap: 24px;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+
+    @media screen and (max-width: 768px) {
+      height: 4px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lightgray !important;
+    border-radius: 20px !important;
+  }
+
+  .catList {
+    img {
+      width: 180px;
+      height: 250px;
+      border-radius: 13px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      color: variables.$Black-text;
+      font-size: 18px;
+
+      width: 180px;
+      font-weight: bold;
+      text-align: center;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.itemList {
+  margin: 80px 0px;
+}
+
+.categorySliderMob {
+  margin: 0px 0px;
+
+  img,
+  video {
+    border-radius: 0px;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+.catContainerMob {
+  margin: 20px 0px;
+  overflow-x: scroll;
+  flex-direction: row;
+  gap: 14px;
+
+  .catList {
+    img {
+      width: 93px;
+      height: 121px;
+      border-radius: 13px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      color: variables.$Black-text;
+      font-size: 12px;
+
+      width: 88px;
+      word-break: break-all;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.HighlightsItemList {
+  padding-left: 20px;
+  color: variables.$Black-text;
+  font-size: 12px;
+}
+.categoryDesc {
+  font-size: 18px;
+  line-height: 26px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

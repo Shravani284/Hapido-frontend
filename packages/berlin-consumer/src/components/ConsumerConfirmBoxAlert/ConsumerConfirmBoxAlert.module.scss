@@ -1,0 +1,21 @@
+@use '../../../../berlin-common/src/global-styles/variables';
+
+.cardContainer {
+  .MuiDialog-paper.MuiDialog-paperScrollPaper {
+    border-radius: 12px !important;
+  }
+  .MsgText {
+    max-width: 300px;
+    text-align: center;
+  }
+}
+.ConfirmBtn {
+  border: 1px solid #FF311C !important;
+  border-radius: 8px !important;
+  padding: 8px 20px !important;
+  background-color: #FF311C !important;
+  color: #FFFFFF !important;
+}
+.ConfirmBtn:hover {
+  background-color: #FF311C !important;
+}

@@ -1,0 +1,23 @@
+FROM node:alpine as builder
+
+WORKDIR /hapido-fe
+
+COPY package*.json ./
+
+RUN yarn
+
+COPY . .
+
+RUN yarn workspace berlin-consumer build
+
+FROM node:alpine
+
+WORKDIR /hapido-fe
+
+COPY --from=builder /hapido-fe/packages/berlin-consumer/dist/ ./berlin-consumer/dist
+
+RUN yarn global add serve
+
+EXPOSE 5173
+
+CMD ["serve", "-s", "berlin-consumer/dist", "-l", "5173"]

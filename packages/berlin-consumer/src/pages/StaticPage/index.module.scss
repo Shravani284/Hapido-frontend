@@ -1,0 +1,77 @@
+.pageTitle {
+  margin-bottom: 20px !important;
+}
+.static {
+  p,
+  span,
+  strong,
+  ul,
+  ol {
+    font-size: 18px;
+    line-height: normal;
+    word-spacing: normal;
+    letter-spacing: normal;
+    padding-right: 0px !important;
+    margin-bottom: 15px !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 15px !important;
+  }
+
+  ol,
+  ul {
+    margin-left: 24px !important;
+    line-height: 28px;
+    margin-bottom: 0px;
+  }
+
+  li {
+    margin-top: 0px;
+    padding-right: 0px !important;
+    margin-bottom: 10px;
+  }
+}
+
+.backBtn {
+  button {
+    width: auto !important;
+    padding: 10px 30px !important;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .pageTitle {
+    margin-bottom: 15px !important;
+  }
+  .static {
+    p,
+    span,
+    strong,
+    ul,
+    ol {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pageTitle {
+    margin-bottom: 15px !important;
+    padding: 0 15px;
+  }
+  .static {
+    padding: 15px;
+    p,
+    span,
+    strong,
+    ul,
+    ol {
+      font-size: 13px;
+    }
+  }
+}

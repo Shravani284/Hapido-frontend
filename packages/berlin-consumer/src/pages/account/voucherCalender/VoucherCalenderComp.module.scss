@@ -1,0 +1,68 @@
+@use '../../../../../berlin-common/src/global-styles/variables';
+.tileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  @media (max-width: 1600px) {
+    font-weight: 15px;
+  }
+}
+
+.label {
+  font-family: 'Gotham';
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 19px;
+  color: #5d686f;
+  @media (max-width: 767px) {
+    font-size: 8px;
+    line-height: 8px;
+  }
+}
+.featherInfo {
+  font-family: 'Gotham';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 19px;
+  margin-bottom: 10px;
+  color: #818990;
+}
+.featherIcon {
+  margin-left: 19px;
+  margin-right: 12px;
+}
+
+.scheduleInputFields {
+  border: 1px solid variables.$border-gray;
+  height: 59px;
+  border-radius: 12px;
+  align-items: center;
+}
+.dropdownContainer {
+  position: relative;
+  cursor: pointer;
+}
+.popupText {
+  font-family: 'gotham';
+  font-size: 16px;
+  font-weight: normal;
+  color: #5d686f;
+  // font-weight: 500;
+}
+
+.card {
+  box-shadow: 0px 2px 5.5px variables.$card-shadow !important;
+  border-radius: 12px !important;
+  padding: 15px 20px;
+  position: absolute;
+  width: 100%;
+  // top: 72px;
+  z-index: 1;
+  margin-top: 6px;
+}

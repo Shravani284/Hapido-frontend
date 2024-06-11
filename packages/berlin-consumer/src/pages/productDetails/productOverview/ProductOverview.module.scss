@@ -1,0 +1,326 @@
+@use '../../../../../berlin-common/src/global-styles/variables';
+
+.overviewContainer {
+  background-color: variables.$secondary-bg;
+  box-shadow: 0px 3px 6px variables.$card-shadow;
+  width: 100%;
+  position: sticky;
+  top: 65px;
+  z-index: 1;
+
+  @media screen and (max-width: 768px) {
+    top: 60px;
+  }
+}
+
+.overviewText {
+  // border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+  color: variables.$Black-text;
+  font-size: 24px;
+  line-height: 38px;
+  margin-top: 40px;
+
+  @media (max-width: 1600px) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (max-width: 768px) {
+    line-height: 24px;
+  }
+}
+
+hr {
+  @media screen and (max-width: 768px) {
+    margin: 4px 0px 14px 0px !important;
+  }
+}
+
+.highlightsList {
+  color: variables.$Black-text;
+  font-size: 24px;
+  padding-left: 26px;
+}
+
+.locationMap {
+  margin: 40px 0px;
+
+  h6 {
+    color: variables.$Black-text;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .googleMap {
+    border-radius: 28px 28px 28px 28px !important;
+    width: 100%;
+    height: 450px;
+    border: 0;
+    margin-top: 20px;
+    box-shadow: 0px 3px 6px variables.$card-shadow;
+  }
+}
+
+.allReview {
+  margin: 40px 0px;
+
+  h6 {
+    color: variables.$Black-text;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .userProfile {
+    display: flex;
+    align-items: center;
+    margin: 30px 0px 15px 0px;
+    .avatarImg {
+      max-width: 100%;
+      width: 72px;
+      height: 72px;
+      height: auto;
+      margin-right: 20px;
+    }
+  }
+
+  // h6 {
+  //   @include variables.textFormat(gothammedium, variables.$Black-text, 24px);
+  // }
+
+  .captions {
+    color: variables.$Black-text;
+    font-size: 15px;
+  }
+
+  .recommended {
+    color: variables.$Black-text;
+    font-size: 18px;
+    padding: 0px 14px;
+  }
+
+  .reviewFor {
+    color: variables.$Black-text;
+    font-size: 16px;
+    span {
+      text-decoration: underline;
+      padding: 0px 6px;
+    }
+  }
+
+  .bookBtn {
+    color: variables.$Black-text;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 0px 20px;
+  }
+
+  .mainReview {
+    color: variables.$Black-text;
+    font-size: 18px;
+    padding: 18px 0px 28px 0px;
+  }
+
+  .reviewImg {
+    width: 114px;
+    height: 114px;
+    margin: 10px 10px;
+    border-radius: 19px;
+    object-fit: cover;
+  }
+}
+.reviewBtn {
+  color: variables.$Black-text;
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid variables.$review-btn-border;
+  padding: 5px 90px;
+  margin-top: 40px;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .overviewText {
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+    color: variables.$Black-text;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .highlightsList {
+    color: variables.$Black-text;
+    font-size: 14px;
+    padding-left: 26px;
+  }
+
+  .locationMap {
+    display: none;
+  }
+
+  .allReview {
+    margin: 40px 0px 0px 0px;
+
+    h6 {
+      color: variables.$Black-text;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.mobRecommended {
+  font-size: 16px;
+  padding-left: 12px;
+  text-decoration: underline;
+
+  span {
+    padding-left: 8px;
+  }
+}
+
+.mobReviewsCard {
+  box-shadow: 0px 3px 6px variables.$card-shadow !important;
+  border-radius: 28px !important;
+  padding: 14px 14px;
+  overflow: visible !important;
+  margin-top: 20px;
+  background-color: variables.$secondary-bg;
+
+  .userProfile {
+    margin: 4px 0px;
+  }
+
+  .avatarImg {
+    max-width: 100%;
+    width: 42px !important;
+    height: 42px !important;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .captions {
+    color: variables.$Black-text;
+    font-size: 12px;
+  }
+
+  .mainReview {
+    .reviewTitle {
+      color: variables.$Black-text;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .reviewFor {
+      font-size: 13px;
+    }
+    color: variables.$Black-text;
+    font-size: 12px;
+    padding: 14px 0px 0px 0px !important;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.MobReviewBtn {
+  color: variables.$Black-text;
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid variables.$review-btn-border;
+  padding: 5px 60px !important;
+  margin-top: 20px;
+  border-radius: 40px;
+  text-align: center;
+  cursor: pointer;
+  text-wrap: nowrap !important;
+}
+
+// code editor css
+
+.overviewDetails {
+  .overviewText {
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+    font-size: 20px;
+
+    p {
+      margin-bottom: 15px;
+      // font-size: 20px !important;
+
+      @media screen and (max-width: 768px) {
+        line-height: 24px;
+        font-size: 13px;
+      }
+    }
+
+    ul,
+    ol {
+      margin-left: 24px !important;
+      line-height: 35px;
+      margin-bottom: 0px;
+
+      @media screen and (max-width: 520px) {
+        margin-left: 17px !important;
+        line-height: 25px;
+      }
+
+      ul,
+      ol,
+      li {
+        font-size: 20px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .overviewText {
+    // border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+    font-size: 16px !important;
+
+    p {
+      line-height: 24px;
+    }
+
+    ul,
+    ol {
+      margin-left: 24px !important;
+      line-height: 28px;
+      margin-bottom: 0px;
+    }
+
+    ul,
+    ol,
+    li {
+      font-size: 16px !important;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+.closeIcon {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  color: #ffffff;
+  height: 1.75em;
+  width: 1.75em;
+  @media screen and (max-width: 768px) {
+    top: 100px;
+    height: 1.5em;
+    width: 1.5em;
+  }
+}

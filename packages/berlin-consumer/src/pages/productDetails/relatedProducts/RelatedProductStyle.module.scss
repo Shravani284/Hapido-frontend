@@ -1,0 +1,84 @@
+@use '../../berlin-common/src/global-styles/variables';
+
+.cardHeading {
+  font-size: 24px;
+
+  color: variables.$Black-text;
+  margin-bottom: 10px;
+}
+.relatedCard {
+  background-color: variables.$secondary-bg;
+  border-radius: 13px;
+  padding: 20px 24px;
+  box-shadow: 0px 3px 6px variables.$card-shadow;
+  @media (max-width: 1440px) {
+    padding: 15px;
+  }
+  .relateImg {
+    max-width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0px;
+    @media (max-width: 1600px) {
+      height: 250px;
+    }
+    @media (max-width: 1440px) {
+      height: 220px;
+    }
+  }
+  .location {
+    display: flex;
+    margin-top: 20px;
+    img {
+      width: 20px;
+    }
+    div {
+      text-decoration: underline;
+      padding: 4px 10px;
+      color: variables.$Black-text;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  h6 {
+    font-size: 18px;
+
+    color: variables.$Black-text;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 10px 0px;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    div {
+      padding: 0px 8px;
+    }
+  }
+  .fromAed {
+    padding-top: 6px;
+    span {
+      color: variables.$Black-text;
+      color: variables.$Black-text;
+      font-size: 18px;
+      line-height: 23px;
+      padding: 0px 8px;
+    }
+  }
+  .view {
+    text-decoration: underline;
+    color: variables.$view-text;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+    margin-top: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .relatedCard {
+    width: 300px !important;
+  }
+}
